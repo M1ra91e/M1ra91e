@@ -17,13 +17,40 @@
 <div class="question">
 <div class="title">(直積群の部分群)</div>
   <p>$G$,$H$を有限群とする。$G\times H$の任意の部分群が($G$の部分群)$\times$($H$の部分群)
-  と書けるための必要十分条件を$G$と$H$の位数の言葉で記述せよ。</p>
+  と書けるための必要十分条件を$G$と$H$の位数$\,|G|,|H|$を用いて記述せよ。</p>
 </div>
 
 <div class="solution">
 <div class="title"></div>
-作成中
+<p>求める条件が「$\,|G|,|H|$が互いに素」であることを示す。<br>
+<br>
+(必要性)<br>
+ある素数$\,p\,$が存在して、$|G|,|H|$を割り切るとする。<br>
+$G$と$H$には、位数$\,p\,$の元$\,\sigma,\tau$が存在する。(例えばsylowの定理を用いて示せる。)<br>
+$\sigma\tau$の生成する巡回群は($G$の部分群)$\times$($H$の部分群)という表示を持たない。<br>
+<br>
+(十分性)<br>
+$\,|G|,|H|$が互いに素であるとし、$K$を$G\times H$の部分群とする。
+$G’= K\cap(G\times\{e\})$<br>
+$H’= K\cap(\{e\}\times H)$<br>
+と定める。<br>
+<br>
+$K$は群なので、$G' \times H' \subset K$である。(これには位数の仮定は用いていない。)<br>
+次に逆の包含を示す。<br>
+$\alpha \in K$とする。$\alpha$の位数を$n$とする。<br>
+$n$は$|G||H|$の約数なので$n$は、
+$n=kl$と書ける。($k$は$|G|$の約数, $l$は$|H|$の約数)<br>
+さらに、$k$と$l$は互いに素なので、$a,b \in \mathbb{N}$が存在して、$ak+bl=1 \, (mod\,n)$とできる。<br>
+<br>
+このとき、$\alpha ^{l} \in G',\,\alpha ^{k} \in H'\,$なので、$\alpha = (\alpha ^{l})^{b} (\alpha ^{k})^{a} \in G' \times H'$。<br>
+したがって$G' \times H' \supset K $。<br>
+特に、$K=G' \times H'$となる。
+
+
+</p>
 </div>
+
+
 
 <br>
 <a href="../../index.html">トップページへ</a><br>
