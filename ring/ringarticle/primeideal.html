@@ -31,27 +31,31 @@
   </p>
   </div>
 </div>
+<br>
 
 
-<h3>その１ 整域に埋め込む</h3>
-整域の部分環は整域です。<br>
-したがって、\(R/p\)から整域への単射が存在すれば、$p$は素イデアルです。
-
+<h3>方法その１ 整域に埋め込む</h3>
+<p>整域の部分環は整域です。<br>
+したがって、\(R/p\)から整域への単射が存在すれば、$p$は素イデアルです。</p>
 <div class="example">
 <div class="title"></div>
 <p>複素多項式環$ \mathbb{C} [x,y] $のイデアル$p=(x^{3}-y^{2})$は素イデアルである。</p>
 </div>
 
+<br>
 <div class="proof">
 <div class="title"></div>
 <p>環の準同型 $ \alpha : \mathbb{C} [x,y] \rightarrow \mathbb{C} [t]$を
 $ \alpha (x)=t^{2}, \alpha (y)=t^{3}$で定める。(多項式の普遍性を用いた。)<br>
 $I=Ker\alpha$とすると、$p \subset I $　である。<br>
 $p \supset I$を示す。<br>
+<br>
 $f(x,y) \in I$とする。これを$y$についての多項式とみなして$y^{2}-x^{3}$で割る。<br>
 つまり、$g(x,y) \in \mathbb{C}[x,y]\,a(x),b(x)\in \mathbb{C}[x]$を用いて、$f(x,y)=(y^{2}-x^{3})g(x,y)+a(x)y+b(x)$と書く。<br>
+<br>
 この時、$\alpha(f)=a(t^{2})t^{3}+b({t^2})=0$となるが、奇数次の項の係数を見て、$a(x)=0$、偶数次の項の係数を見て、$b(x)=0$がわかる。<br>
 特に、$f(x,y)=(x^{2}-y^{3})g(x,y)\in p$であり、$p \supset I$がわかる。<br>
+<br>
 以上から、$I=p$であり準同型定理から、$R/p \hookrightarrow \mathbb{C}[t]$が誘導される。<br>
 特に、$p$は素イデアルである。</p>
 </div>
