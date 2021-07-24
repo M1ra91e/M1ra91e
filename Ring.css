@@ -136,7 +136,7 @@ h2:after {
   width: 30%;
 }
 
-ul, ol {
+ul{
   color: #1e366a;
   border-top: solid #1e366a 1px;/*上のボーダー*/
   border-bottom: solid #1e366a 1px;/*下のボーダー*/
@@ -162,8 +162,4 @@ ul, ol {
   color: #474747;
   background: whitesmoke;/*背景色*/
 
-}
-
-.contents :not(ol) {
-  color:#FFF;
 }
