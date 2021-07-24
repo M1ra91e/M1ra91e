@@ -163,3 +163,7 @@ ul, ol {
   background: whitesmoke;/*背景色*/
 
 }
+
+.contents :not(ol) {
+  color:#FFF;
+}
