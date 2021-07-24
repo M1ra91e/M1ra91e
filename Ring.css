@@ -121,6 +121,7 @@ footer{
   content: "(解答終わり）"
 }
 
+
 h2 {
   border-bottom: solid 3px skyblue;
   position: relative;
@@ -133,4 +134,32 @@ h2:after {
   border-bottom: solid 3px #ffc778;
   bottom: -3px;
   width: 30%;
+}
+
+ul, ol {
+  color: #1e366a;
+  border-top: solid #1e366a 1px;/*上のボーダー*/
+  border-bottom: solid #1e366a 1px;/*下のボーダー*/
+  padding: 0.5em 0 0.5em 1.5em;
+}
+
+
+.theorem::before{
+  content: "定理";
+  font-weight: bold;
+}
+
+.theorem>*:first-child{
+  display: inline; /*div.theoremの直下は絶対インライン*/
+}
+
+.theorem>.title{
+  font-weight: bold; /*お好み装飾*/
+}
+  .theorem{
+  padding: 0.2em 0.5em;
+  margin: 0em 0;
+  color: #474747;
+  background: whitesmoke;/*背景色*/
+
 }
