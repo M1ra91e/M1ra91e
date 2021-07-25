@@ -122,12 +122,12 @@ footer{
 }
 
 
-h2 {
+h3 {
   border-bottom: solid 3px skyblue;
   position: relative;
 }
 
-h2:after {
+h3:after {
   position: absolute;
   content: " ";
   display: block;
