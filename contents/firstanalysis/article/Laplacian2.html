@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../../article.css">
+  <title>2次元ラプラシアン</title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
+  </script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+</head>
+<body>
+<h1>数学処「らぷらし庵」</h1>
+
+<h2>2次元ラプラシアンの極座標表示の小技</h2>
+
+<p>偏微分と変数変換の関係を学ぶ題材として学ばれることの多い2次元ラプラシアンの極座標表示ですが、
+  複素微分を経由すると比較的簡単に導くことが可能です。</p>
+
+<h3>定式化</h3>
+<p>今回の定理は以下です。</p>
+<div class="theorem">
+<div class="title">(2次元ラプラシアンの極座標表示)</div>
+<p>$\mathbb{R} ^ {2}$上の微分作用素　
+  $\Delta = \frac{\partial ^{2}}{\partial  x ^{2}}  + \frac{\partial ^{2}}{\partial y^{2}} \,$を、<br>
+　極座標変換$$\, \left\{ \begin{array}{l} x=r \cos \theta \\ y=r \sin \theta \end{array} \right.$$
+のもと$(r,\theta)$の式で書くと、
+$$\Delta  = \frac{1}{r^2} \left\{ (r \frac{\partial}{\partial r})^{2}+(\frac{\partial}{\partial \theta}) ^{2}  \right\}$$
+となる。
+</p>
+</div>
+</div>
+
+<h3>記号の確認と複素微分</h3>
+<p>
+  $z=x+iy$とすると、$z=re^{i\theta}$です。(Eularの等式)<br><br>
+  $r=e^{t},\,\,$$w=t+i\theta$とします。<br>
+  このとき、$z=e^{t+i\theta}=e^{w}$となります。<br>
+  <br>
+  <br>
+  さらに、<br>
+
+$\left\{ \begin{array}{l} \frac{\partial}{\partial z}=\frac{1}{2} \left( \frac{\partial}{\partial x} - i\frac{\partial}{\partial y} \right) \\
+\frac{\partial}{\partial \bar{z}}=\frac{1}{2} \left( \frac{\partial}{\partial x} + i\frac{\partial}{\partial y} \right) \end{array} \right.$<br>
+と定めます。<br>
+<br>
+これはWirtingerの微分と呼ばれる微分作用素です。<br>
+詳しくは、一般的な複素解析の教科書に書いてあると思いますが、<br>
+これらは、$z,\,\bar{z}$で表される関数の偏微分のように振る舞うことが知られています。<br>
+<br>
+例えば、<br>
+$\frac{\partial}{\partial z} (z^{2} + \bar{z} + 5z \bar{z}) = 2z+5\bar{z}$<br>
+$\frac{\partial}{\partial \bar{z}} (z^{2} + \bar{z} + 5z \bar{z}) = 1+5z$<br>
+などと計算ができます。<br>
+<br>
+同等にして$\frac{\partial}{\partial w},\,\frac{\partial}{\partial \bar{w}}$も定めます。<br>
+
+<h3>指数関数と座標変換</h3>
+<p>
+$\frac{\partial}{\partial t}=r \frac{\partial}{\partial r}$
+が成り立ちます。<br>
+
+これは、$r=e^{t}$から、以下のように計算されます。<br>
+$\frac{\partial}{\partial t}=\frac{\partial r}{\partial t} \frac{\partial}{\partial r}=
+\frac{\partial e^{t}}{\partial t} \frac{\partial}{\partial r}=e^{t} \frac{\partial}{\partial r}= r \frac{\partial}{\partial r}$<br>
+<br>
+同じ理由で、<br>
+$\, \left\{ \begin{array}{l} \frac{\partial}{\partial w}=z \frac{\partial}{\partial z}
+ \\ \frac{\partial}{\partial \bar{w}}=\bar{z} \frac{\partial}{\partial \bar{z}} \end{array} \right.$<br>
+
+が成り立ちます。<br></p>
+
+<h3>証明</h3>
+<p>準備ができたので証明を行います。</p>
+<div class="proof">
+<div title="title"></div>
+<p>
+$r^2 \Delta =r^2 \left( \frac{\partial ^{2}}{\partial  x ^{2}}  + \frac{\partial ^{2}}{\partial y^{2}} \right) $
+$=r^2 \left( \frac{\partial}{\partial x} - i\frac{\partial}{\partial y}\right)$
+$\left( \frac{\partial}{\partial x} + i\frac{\partial}{\partial y} \right)$<br>
+$=4|z|^2 \frac{\partial}{\partial z}\frac{\partial}{\partial \bar{z}}$
+$=4\left( z\frac{\partial}{\partial z} \right)  \left( \bar{z}\frac{\partial}{\partial \bar{z}} \right)$<br>
+$=4\frac{\partial}{\partial w} \frac{\partial}{\partial \bar{w}}$
+$=\frac{\partial ^{2}}{\partial  t ^{2}}  + \frac{\partial ^{2}}{\partial \theta^{2}}$<br>
+$=(r \frac{\partial}{\partial r})^{2}+(\frac{\partial}{\partial \theta}) ^{2} $
+</p>
+</div>
+<br>
+<br>
+
+
+<a href="../../../index.html">トップページへ</a><br>
+<a href="../list.html">微分積分学へ</a>
+
+</body>
+</html>
