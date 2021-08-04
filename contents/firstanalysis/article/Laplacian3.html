@@ -57,10 +57,94 @@ $$\left\{ \begin{array}{l} z = r \cos \theta \\ \rho =r \sin \theta \\ \phi \ =\
 
 <h3>計算で用いる変換則</h3>
 <p>計算で用いる変換則は主に2種類です。<br>
-  一つ目が二次元ラプラシアンの極座標表示です。
-(執筆中)
+  <br>
+  一つ目が二次元ラプラシアンの極座標表示です。<br>
+  よく知らないという方は、よければ以下の記事を参考にしてください。<br>
+  <a href="Laplacian2.html">2次元ラプラシアンの極座標表示</a><br>
+  <br>
+  本記事では以下を用います。
+  $$\frac{\partial ^2}{\partial x^2}+
+  \frac{\partial ^2}{\partial y^2}=
+  \frac{\partial ^2}{\partial \rho ^2}+
+  \frac{1}{\rho}\frac{\partial}{\partial \rho}+
+  \frac{1}{\rho ^2}\frac{\partial ^2}{\partial \phi ^2}$$
+
+  $$\frac{\partial ^2}{\partial z^2}+
+  \frac{\partial ^2}{\partial \rho ^2}=
+  \frac{\partial ^2}{\partial r^2}+
+  \frac{1}{r}\frac{\partial}{\partial r}+
+  \frac{1}{r^2}\frac{\partial ^2}{\partial \theta}$$
+  <br>
+  <br>
+  <br>
+  2つ目は、普通のチェーンルールです。<br>
+  <br>
+  $\left\{ \begin{array}{l} z=r \cos \theta \\
+  \rho = r \sin \theta \end{array}\right.$　　から、
+  <br>
+  <br>
+$\begin{pmatrix}
+\frac{\partial}{\partial r} \\
+\frac{1}{r} \frac{\partial}{\partial \theta} \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+\frac{\partial z}{\partial r} & \frac{\partial \rho}{\partial r} \\
+\frac{1}{r} \frac{\partial z}{\partial \theta} & \frac{1}{r} \frac{\partial \rho}{\partial \theta}\\
+\end{pmatrix}
+
+\begin{pmatrix}
+\frac{\partial}{\partial z} \\
+\frac{\partial}{\partial \rho}\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos \theta & \sin \theta \\
+-\sin \theta & \cos \theta \\
+\end{pmatrix}
+
+\begin{pmatrix}
+\frac{\partial}{\partial z} \\
+\frac{\partial}{\partial \rho}\\
+\end{pmatrix}
+$　　なので、
+<br>
+<br>
+$
+\begin{pmatrix}
+\frac{\partial}{\partial z} \\
+\frac{\partial}{\partial \rho}\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta \\
+\end{pmatrix}
+
+\begin{pmatrix}
+\frac{\partial}{\partial r} \\
+\frac{1}{r} \frac{\partial}{\partial \theta} \\
+\end{pmatrix}$　　が成り立ちます。
+<br>
+<br>
+特に本記事では第2行の、
+$$\frac{\partial}{\partial \rho}
+=
+\sin \theta \frac{\partial}{\partial r}
++
+\frac{\cos \theta}{r} \frac{\partial}{\partial \theta}
+$$
+を用います。
+
 </p>
 
+<h3>証明</h3>
+<div class="proof">
+<div class="title"></div>
+<p>執筆中
+
+</p>
+</div>
 <a href="../../../index.html">トップページへ</a><br>
 <a href="../list.html">微分積分学へ</a>
 
