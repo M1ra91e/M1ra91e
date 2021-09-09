@@ -5,8 +5,7 @@
     margin: 1em 1;
     color: #474747;
     background: whitesmoke;/*背景色*/
-    border-left: double 7px #4ec4d3;/*左線*/
-    border-right: double 7px #4ec4d3;/*右線*/
+
 }
 
 
@@ -15,6 +14,7 @@
   .review::before{
     content: "復習 ";
     font-weight: bold;
+
   }
 
 
@@ -42,9 +42,8 @@
 .proof{
   padding: 0.2em 0.5em;
   margin: 1em 1;
-
-  border-left: double 7px #4ec4d3;/*左線*/
-
+  border-left: solid 2px black;/*左線*/
+  
 }
 .proof::before{
   content: "証明 ";
@@ -139,4 +138,16 @@ footer{
   color: #474747;
   background: whitesmoke;/*背景色*/
 
+}
+
+h2{
+  margin-left: 10px;
+}
+
+p{
+  margin-left: 10px;
+}
+
+h3{
+  margin-left: 10px;
 }
