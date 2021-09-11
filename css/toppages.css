@@ -2,12 +2,15 @@
 
 p{
   margin-left: 10px;
+  background-color: white;
 }
 
-h2{
+h3{
   margin-left: 10px;
 }
 
 a{
   margin-left: 10px;
+  text-decoration: none;
+  color: black;
 }
