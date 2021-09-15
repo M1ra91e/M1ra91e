@@ -2,7 +2,8 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/menu.css">
   <title>タイトル</title>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
@@ -13,7 +14,7 @@
 </head>
 <header>
   <h1>
-    
+
   </h1>
   <nav class="pc-nav">
     <ul>
@@ -26,10 +27,24 @@
 </header>
 
 <body>
-  $$\[\begin{tikzcd}
-  	{\pi_1(S^1)} & {\pi_1(S^3)} & {\pi_1(S^2)}
-  	\arrow[from=1-1, to=1-2]
-  	\arrow[from=1-2, to=1-3]
-  \end{tikzcd}\]$$
+
+  <h2>多様体論</h2>
+
+
+<h3>１の分割</h3>
+  <input id="acd-check1" class="acd-check" type="checkbox">
+<label class="acd-label" for="acd-check1">リーマン計量の存在</label>
+<div class="acd-content">
+    <p><h4>リーマン計量の存在</h4>
+      パラコンパクト多様体にはリーマン計量が存在する。</p>
+</div>
+<input id="acd-check2" class="acd-check" type="checkbox">
+<label class="acd-label" for="acd-check2">ベクトル場の拡張</label>
+<div class="acd-content">
+    <p>hello.world2!</p>
+</div>
+
+
+
 </body>
 </html>
