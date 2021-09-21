@@ -1,64 +1,135 @@
 @charset "UTF-8";
 
+@media screen and (max-width:480px) {
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+  html {
+    box-sizing: border-box;
+  }
+
+  body {
+     margin: 0px;
+     padding: 100px 0px 10px;
+     font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+     background-color: white;
+  }
+
+
+  header{
+    width: 100%;
+    padding: 30px 4% 10px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+
+  }
+
+  header h1{
+    margin: 0; padding: 0;
+    font-size: 20px;
+    color: white;
+  }
+
+  header a{
+    text-decoration: none;
+    color: white;
+  }
+
+  header ul{
+    list-style: none;
+    mergin: 0;
+    display: flex;
+  }
+
+  header li{
+    margin: 0 0 0 15px;
+    font-size: 14px;
+    color: white;
+  }
+
+  nav{
+    margin: 0 0 0 auto;
+  }
+
+  a:hover{
+    color: royalblue;
+    text-decoration: underline;
+
+  }
+
+
+
 }
 
-html {
-  box-sizing: border-box;
-}
+@media screen and (min-width:480px) {
 
-body {
-   margin: 0px;
-   padding: 100px 0px 10px;
-   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
-   background-color: white;
-}
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+
+  body {
+     margin: 0px;
+     padding: 100px 0px 10px;
+     font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+     background-color: white;
+  }
 
 
-header{
-  width: 100%;
-  padding: 30px 4% 10px;
-  background-color: black;
-  position: fixed;
-  top: 0;
-  display: flex;
-  align-items: center;
+  header{
+    width: 100%;
+    padding: 30px 4% 10px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
 
-}
+  }
 
-header h1{
-  margin: 0; padding: 0;
-  font-size: 20px;
-  color: white;
-}
+  header h1{
+    margin: 0; padding: 0;
+    font-size: 20px;
+    color: white;
+  }
 
-header a{
-  text-decoration: none;
-  color: white;
-}
+  header a{
+    text-decoration: none;
+    color: white;
+  }
 
-header ul{
-  list-style: none;
-  mergin: 0;
-  display: flex;
-}
+  header ul{
+    list-style: none;
+    mergin: 0;
+    display: flex;
+  }
 
-header li{
-  margin: 0 0 0 15px;
-  font-size: 14px;
-  color: white;
-}
+  header li{
+    margin: 0 0 0 15px;
+    font-size: 14px;
+    color: white;
+  }
 
-nav{
-  margin: 0 0 0 auto;
-}
+  nav{
+    margin: 0 0 0 auto;
+  }
 
-a:hover{
-  color: royalblue;
-  text-decoration: underline;
+  a:hover{
+    color: royalblue;
+    text-decoration: underline;
+
+  }
+
 
 }
