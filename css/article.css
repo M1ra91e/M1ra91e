@@ -9,7 +9,10 @@
 }
 
 
+body{
 
+  margin-left: 10px;
+}
 
   .review::before{
     content: "復習 ";
@@ -43,7 +46,7 @@
   padding: 0.2em 0.5em;
   margin: 1em 1;
   border-left: solid 2px black;/*左線*/
-  
+
 }
 .proof::before{
   content: "証明 ";
@@ -150,4 +153,5 @@ p{
 
 h3{
   margin-left: 10px;
+  border-bottom: solid 3px gray;
 }
