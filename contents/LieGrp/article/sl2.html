@@ -4,9 +4,9 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="utf-8">
-  <link rel="stylesheet" href="../../../article.css">
+  <link rel="stylesheet" href="../../../css/article.css">
   <link rel="stylesheet" href="../../../css/header.css">
-  <title>タイトル</title>
+  <title>sl(2,R)の指数写像</title>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
   </script>
@@ -29,10 +29,72 @@
 
 <body>
 
+<h2>$\mathfrak{sl}(2,\mathbb{R})$の指数写像</h2>
 
+<p>$\mathfrak{sl}(2,\mathbb{R})$の指数写像を計算します。<br>
+  $\mathfrak{sl}(2)$の特殊事情により、計算結果が馴染み深い関数
+  のみで書けることが分かります。</p>
 
+<h3>定式化</h3>
+<p>
+  $\mathfrak{sl}(2,\mathbb{R})=\{X\in M(2,\mathbb{R}) \;; \mathrm{tr}X=0\}$<br>
+  $SL(2,\mathbb{R})=\{X\in M(2,\mathbb{R}) \;; \det X=1\}$
 
+とし、<br><br>
 
+$\exp \:: \mathfrak{sl}(2,\mathbb{R})\rightarrow SL(2,\mathbb{R})$
+
+を、$\exp X = \displaystyle\sum_{n=1}^{\infty} \displaystyle\frac{X^n}{n!}$で定める。
+<div class="theorem">
+<div class="title">($\mathfrak{sl}(2,\mathbb{R})$の指数写像)</div>
+<p>
+
+$\exp \begin{pmatrix}
+x & y-z \\
+y+z & -x \\
+\end{pmatrix}
+$
+$=
+\begin{cases}
+\cosh r
+\begin{pmatrix}
+1 & 0\\
+0 & 1 \\
+\end{pmatrix}
++
+\displaystyle \frac{\sinh r}{r}
+\begin{pmatrix}
+x & y-z \\
+y+z & -x \\
+\end{pmatrix}&
+(x^2+y^2-z^2>0)\\
+\begin{pmatrix}
+1+x & y-z \\
+y+z & 1-x \\
+\end{pmatrix}&
+(x^2+y^2-z^2=0)\\
+\cos r
+\begin{pmatrix}
+1 & 0\\
+0 & 1 \\
+\end{pmatrix}
++
+\displaystyle \frac{\sin r}{r}
+\begin{pmatrix}
+x & y-z \\
+y+z & -x \\
+\end{pmatrix}&
+(x^2+y^2-z^2 <0)\\
+
+\end{cases}
+$
+<br>
+<br>
+となる。<br>
+ここで、$r=\sqrt{|x^2+y^2-z^2|}$である。
+</p>
+</div>
+<br>
 <a href="../list.html">リー群論へ</a>
 
 </body>
