@@ -49,11 +49,13 @@ $\exp \:: \mathfrak{sl}(2,\mathbb{R})\rightarrow SL(2,\mathbb{R})$
 <div class="title">($\mathfrak{sl}(2,\mathbb{R})$の指数写像)</div>
 <p>
 
+<div class="hblank">
 $\exp \begin{pmatrix}
 x & y-z \\
 y+z & -x \\
 \end{pmatrix}
 $
+</div>
 $=
 \begin{cases}
 \cosh r
@@ -85,15 +87,59 @@ x & y-z \\
 y+z & -x \\
 \end{pmatrix}&
 (x^2+y^2-z^2 <0)\\
-
 \end{cases}
 $
+
 <br>
 <br>
 となる。<br>
 ここで、$r=\sqrt{|x^2+y^2-z^2|}$である。
 </p>
 </div>
+  <div class="proof">
+    <div class="title"></div>
+    <p>
+
+$
+\begin{pmatrix}
+x & y-z \\
+y+z & -x \\
+\end{pmatrix}^2
+$
+$
+=
+\begin{pmatrix}
+x^2+y^2-z^2 & 0 \\
+0 & x^2+y^2-z^2 \\
+\end{pmatrix}$
+なので、<br><br>
+
+$\exp
+\begin{pmatrix}
+x & y-z\\
+y+z & -x \\
+\end{pmatrix}
+$
+$=
+\displaystyle\sum_{n=0}^{\infty}
+\displaystyle\frac{1}{2n!} (x^2+y^2-z^2)^n
+\begin{pmatrix}
+1 & 0 \\
+0 & 1 \\
+\end{pmatrix}
++
+\displaystyle\sum_{n=0}^{\infty}
+\frac{1}{(2n+1)!}(x^2+y^2-z^2)^n
+\begin{pmatrix}
+x & y-z \\
+y+z & -x \\
+\end{pmatrix}
+$
+<br>
+から、上の結果を得る。
+  </div>
+
+</p>
 <br>
 <a href="../list.html">リー群論へ</a>
 
