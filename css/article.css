@@ -10,7 +10,6 @@
 
 
 body{
-
   margin-left: 10px;
 }
 
@@ -154,4 +153,8 @@ p{
 h3{
   margin-left: 10px;
   border-bottom: solid 3px gray;
+}
+
+.hblank{
+  line-height: 80px;
 }
