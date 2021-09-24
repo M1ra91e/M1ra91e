@@ -40,11 +40,23 @@
   $\mathfrak{sl}(2,\mathbb{R})=\{X\in M(2,\mathbb{R}) \;; \mathrm{tr}X=0\}$<br>
   $SL(2,\mathbb{R})=\{X\in M(2,\mathbb{R}) \;; \det X=1\}$
 
-とし、<br><br>
+とし、</p>
 
+<p>
 $\exp \:: \mathfrak{sl}(2,\mathbb{R})\rightarrow SL(2,\mathbb{R})$
 
-を、$\exp X = \displaystyle\sum_{n=1}^{\infty} \displaystyle\frac{X^n}{n!}$で定める。
+を、$\exp X = \displaystyle\sum_{n=1}^{\infty} \displaystyle\frac{X^n}{n!}$で定める。</p>
+<p>
+  また、$\displaystyle\sum_{n=0}^{\infty}
+  \displaystyle\frac{x^n}{(2n)!}$、
+  $\displaystyle\sum_{n=0}^{\infty}
+  \displaystyle\frac{x^n}{(2n+1)!}\,$を、
+  各々、$\cosh\sqrt{x}\,$、$\displaystyle\frac{\sinh\sqrt{x}}{\sqrt{x}}\,$と書く。<br>
+　$x<0 \,$のとき、$\cosh\sqrt{x}=\cos \sqrt{-x}$、$\displaystyle\frac{\sinh\sqrt{x}}{\sqrt{x}}=\frac{\sin \sqrt{-x}}{\sqrt{x}}$
+ である。
+</p>
+
+<h3>計算</h3>
 <div class="theorem">
 <div class="title">($\mathfrak{sl}(2,\mathbb{R})$の指数写像)</div>
 <p>
@@ -57,43 +69,24 @@ y+z & -x \\
 $
 </div>
 $=
-\begin{cases}
-\cosh r
+\cosh \sqrt{x^2+y^2-z^2}
 \begin{pmatrix}
 1 & 0\\
 0 & 1 \\
 \end{pmatrix}
 +
-\displaystyle \frac{\sinh r}{r}
+\displaystyle \frac{\sinh \sqrt{x^2+y^2-z^2}}{\sqrt{x^2+y^2-z^2}}
 \begin{pmatrix}
 x & y-z \\
 y+z & -x \\
-\end{pmatrix}&
-(x^2+y^2-z^2>0)\\
-\begin{pmatrix}
-1+x & y-z \\
-y+z & 1-x \\
-\end{pmatrix}&
-(x^2+y^2-z^2=0)\\
-\cos r
-\begin{pmatrix}
-1 & 0\\
-0 & 1 \\
 \end{pmatrix}
-+
-\displaystyle \frac{\sin r}{r}
-\begin{pmatrix}
-x & y-z \\
-y+z & -x \\
-\end{pmatrix}&
-(x^2+y^2-z^2 <0)\\
-\end{cases}
+
 $
 
 <br>
 <br>
 となる。<br>
-ここで、$r=\sqrt{|x^2+y^2-z^2|}$である。
+
 </p>
 </div>
   <div class="proof">
