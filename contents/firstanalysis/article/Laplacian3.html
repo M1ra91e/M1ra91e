@@ -37,7 +37,7 @@
 <div class="theorem">
 <div class="title">(3次元ラプラシアンの極座標表示)</div>
 <p>
-$R^{3}$上のラプラシアン$\Delta = \frac{\partial ^2}{\partial x^2}+
+$R^{3}$上のラプラシアン$\Delta = \displaystyle\frac{\partial ^2}{\partial x^2}+
 \frac{\partial ^2}{\partial y ^2}+\frac{\partial ^2}{\partial z ^2}$は、<br>
 極座標変換
 $$\left\{ \begin{array}{l} x=r \cos \phi \sin \theta \\
@@ -156,31 +156,32 @@ $$
 <div class="proof">
 <div class="title"></div>
 <p>
-$\Delta= \frac{\partial ^2}{\partial x^2}+
+$\Delta$<br>
+$= \displaystyle\frac{\partial ^2}{\partial x^2}+
 \frac{\partial ^2}{\partial y^2}+
 \frac{\partial ^2}{\partial z^2}
 $<br>
 $=
-\frac{\partial ^2}{\partial \rho ^2}+
+\displaystyle\frac{\partial ^2}{\partial \rho ^2}+
 \frac{1}{\rho}\frac{\partial}{\partial \rho}+
 \frac{1}{\rho ^2} \frac{\partial ^2}{\partial \phi ^2}+
 \frac{\partial ^2}{\partial z^2}
 $<br>
 $=
-\left( \frac{\partial ^2}{\partial z^2}
+\displaystyle\left( \frac{\partial ^2}{\partial z^2}
 +\frac{\partial ^2}{\partial \rho ^2} \right)
 +\frac{1}{\rho} \frac{\partial}{\partial \rho}
 +\frac{1}{\rho ^2} \frac{\partial ^2}{\partial \phi ^2}
 $<br>
 $=
-\frac{\partial ^2}{\partial r^2}+
+\displaystyle\frac{\partial ^2}{\partial r^2}+
 \frac{1}{r} \frac{\partial}{\partial r}+
 \frac{1}{r ^2} \frac{\partial ^2}{\partial \theta ^2}+
 \frac{1}{r \sin \theta} \left( \sin \theta \frac{\partial}{\partial r}
 + \frac{\cos \theta}{r} \frac{\partial}{\partial \theta} \right)
 + \frac{1}{r^2 \sin ^2 \theta} \frac{\partial}{\partial \phi}
 $<br>
-$
+$\displaystyle
 =\frac{\partial ^2}{\partial r^2}
 +\frac{2}{r} \frac{\partial}{\partial r}
 +\frac{1}{r ^2} \frac{\partial ^2}{\partial \theta ^2}
