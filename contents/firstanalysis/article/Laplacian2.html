@@ -42,7 +42,7 @@
 <div class="theorem">
 <div class="title">(2次元ラプラシアンの極座標表示)</div>
 <p>$\mathbb{R} ^ {2}$上の微分作用素　
-  $\Delta = \frac{\partial ^{2}}{\partial  x ^{2}}  + \frac{\partial ^{2}}{\partial y^{2}} \,$を、<br>
+  $\Delta = \displaystyle\frac{\partial ^{2}}{\partial  x ^{2}}  + \frac{\partial ^{2}}{\partial y^{2}} \,$を、<br>
 　極座標変換$$\, \left\{ \begin{array}{l} x=r \cos \theta \\ y=r \sin \theta \end{array} \right.$$
 のもと$(r,\theta)$の式で書くと、
 $$\Delta  = \frac{1}{r^2} \left\{ (r \frac{\partial}{\partial r})^{2}+(\frac{\partial}{\partial \theta}) ^{2}  \right\}$$
@@ -60,8 +60,8 @@ $$\Delta  = \frac{1}{r^2} \left\{ (r \frac{\partial}{\partial r})^{2}+(\frac{\pa
   <br>
   さらに、<br>
 
-$\left\{ \begin{array}{l} \frac{\partial}{\partial z}=\frac{1}{2} \left( \frac{\partial}{\partial x} - i\frac{\partial}{\partial y} \right) \\
-\frac{\partial}{\partial \bar{z}}=\frac{1}{2} \left( \frac{\partial}{\partial x} + i\frac{\partial}{\partial y} \right) \end{array} \right.$<br>
+$\left\{ \begin{array}{l} \displaystyle\frac{\partial}{\partial z}=\frac{1}{2} \left( \frac{\partial}{\partial x} - i\frac{\partial}{\partial y} \right) \\
+\displaystyle\frac{\partial}{\partial \bar{z}}=\frac{1}{2} \left( \frac{\partial}{\partial x} + i\frac{\partial}{\partial y} \right) \end{array} \right.$<br>
 と定めます。<br>
 <br>
 これはWirtingerの微分と呼ばれる微分作用素です。<br>
@@ -69,24 +69,24 @@ $\left\{ \begin{array}{l} \frac{\partial}{\partial z}=\frac{1}{2} \left( \frac{\
 これらは、$z,\,\bar{z}$で表される関数の偏微分のように振る舞うことが知られています。<br>
 <br>
 例えば、<br>
-$\frac{\partial}{\partial z} (z^{2} + \bar{z} + 5z \bar{z}) = 2z+5\bar{z}$<br>
-$\frac{\partial}{\partial \bar{z}} (z^{2} + \bar{z} + 5z \bar{z}) = 1+5z$<br>
+$\displaystyle\frac{\partial}{\partial z} (z^{2} + \bar{z} + 5z \bar{z}) = 2z+5\bar{z}$<br>
+$\displaystyle\frac{\partial}{\partial \bar{z}} (z^{2} + \bar{z} + 5z \bar{z}) = 1+5z$<br>
 などと計算ができます。<br>
 <br>
-同等にして$\frac{\partial}{\partial w},\,\frac{\partial}{\partial \bar{w}}$も定めます。<br>
+同等にして$\displaystyle\frac{\partial}{\partial w},\,\frac{\partial}{\partial \bar{w}}$も定めます。<br>
 
 <h3>指数関数と座標変換</h3>
 <p>
-$\frac{\partial}{\partial t}=r \frac{\partial}{\partial r}$
+$\displaystyle\frac{\partial}{\partial t}=r \frac{\partial}{\partial r}$
 が成り立ちます。<br>
 
-これは、$r=e^{t}$から、以下のように計算されます。<br>
-$\frac{\partial}{\partial t}=\frac{\partial r}{\partial t} \frac{\partial}{\partial r}=
-\frac{\partial e^{t}}{\partial t} \frac{\partial}{\partial r}=e^{t} \frac{\partial}{\partial r}= r \frac{\partial}{\partial r}$<br>
+これは、$\displaystyle r=e^{t}$から、以下のように計算されます。<br>
+$\displaystyle\frac{\partial}{\partial t}=\frac{\partial r}{\partial t} \frac{\partial}{\partial r}=
+\displaystyle\frac{\partial e^{t}}{\partial t} \frac{\partial}{\partial r}=e^{t} \frac{\partial}{\partial r}= r \frac{\partial}{\partial r}$<br>
 <br>
 同じ理由で、<br>
-$\, \left\{ \begin{array}{l} \frac{\partial}{\partial w}=z \frac{\partial}{\partial z}
- \\ \frac{\partial}{\partial \bar{w}}=\bar{z} \frac{\partial}{\partial \bar{z}} \end{array} \right.$<br>
+$\, \left\{ \begin{array}{l} \displaystyle\frac{\partial}{\partial w}=z \frac{\partial}{\partial z}
+ \\ \displaystyle\frac{\partial}{\partial \bar{w}}=\bar{z} \frac{\partial}{\partial \bar{z}} \end{array} \right.$<br>
 
 が成り立ちます。<br></p>
 
@@ -95,14 +95,15 @@ $\, \left\{ \begin{array}{l} \frac{\partial}{\partial w}=z \frac{\partial}{\part
 <div class="proof">
 <div title="title"></div>
 <p>
-$r^2 \Delta =r^2 \left( \frac{\partial ^{2}}{\partial  x ^{2}}  + \frac{\partial ^{2}}{\partial y^{2}} \right) $
-$=r^2 \left( \frac{\partial}{\partial x} - i\frac{\partial}{\partial y}\right)$
-$\left( \frac{\partial}{\partial x} + i\frac{\partial}{\partial y} \right)$<br>
-$=4|z|^2 \frac{\partial}{\partial z}\frac{\partial}{\partial \bar{z}}$
-$=4\left( z\frac{\partial}{\partial z} \right)  \left( \bar{z}\frac{\partial}{\partial \bar{z}} \right)$<br>
-$=4\frac{\partial}{\partial w} \frac{\partial}{\partial \bar{w}}$
-$=\frac{\partial ^{2}}{\partial  t ^{2}}  + \frac{\partial ^{2}}{\partial \theta^{2}}$<br>
-$=(r \frac{\partial}{\partial r})^{2}+(\frac{\partial}{\partial \theta}) ^{2} $
+$r^2 \Delta $<br>
+$=r^2 \left( \displaystyle\frac{\partial ^{2}}{\partial  x ^{2}}  + \frac{\partial ^{2}}{\partial y^{2}} \right) $<br>
+$=r^2 \left( \displaystyle\frac{\partial}{\partial x} - i\frac{\partial}{\partial y}\right)$
+$\left( \displaystyle\frac{\partial}{\partial x} + i\frac{\partial}{\partial y} \right)$<br>
+$=4|z|^2 \displaystyle\frac{\partial}{\partial z}\frac{\partial}{\partial \bar{z}}$<br>
+$=4\left( z\displaystyle\frac{\partial}{\partial z} \right)  \left( \bar{z}\displaystyle\frac{\partial}{\partial \bar{z}} \right)$<br>
+$=4\displaystyle\frac{\partial}{\partial w} \frac{\partial}{\partial \bar{w}}$
+$=\displaystyle\frac{\partial ^{2}}{\partial  t ^{2}}  + \displaystyle\frac{\partial ^{2}}{\partial \theta^{2}}$<br>
+$=(r \displaystyle\frac{\partial}{\partial r})^{2}+(\displaystyle\frac{\partial}{\partial \theta}) ^{2} $
 </p>
 </div>
 <br>
