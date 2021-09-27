@@ -69,23 +69,25 @@ y+z & -x \\
 $
 </div>
 $=
-\cosh \sqrt{x^2+y^2-z^2}
+\cosh r
 \begin{pmatrix}
 1 & 0\\
 0 & 1 \\
 \end{pmatrix}
 +
-\displaystyle \frac{\sinh \sqrt{x^2+y^2-z^2}}{\sqrt{x^2+y^2-z^2}}
+\displaystyle \frac{\sinh r}{r}
 \begin{pmatrix}
 x & y-z \\
 y+z & -x \\
 \end{pmatrix}
 
 $
-
-<br>
-<br>
-となる。<br>
+</p>
+<p>
+となる。
+</p>
+<p>
+  ここで、$r=\sqrt {x^2+y^2-z^2}\,$である。
 
 </p>
 </div>
@@ -133,6 +135,43 @@ $
   </div>
 
 </p>
+
+<h3>写像の性質</h3>
+<p>
+  $SL(2,\mathbb{R})$を、
+   $\displaystyle \left\{
+    \begin{pmatrix}
+    W+X & Y-Z \\
+    Y+Z & W-X \\
+    \end{pmatrix}
+    \in M(2,\mathbb{R})
+    \,\middle|
+    \,W^2-X^2-Y^2+Z^2=1
+        \right\}$とみなす。
+</p>
+<p>
+  この表示のもと、
+  $\exp
+  \begin{pmatrix}
+  x & y-z \\
+  y+z & -x \\
+  \end{pmatrix}
+  $は、
+</p>
+<p>
+  $\left\{ \begin{array}{l}
+  \displaystyle W = \cosh r \\
+  \displaystyle X = x\frac{\sinh r}{r}\\
+  \displaystyle Y = y \frac{\sinh r}{r}\\
+  \displaystyle Z = z\frac{\sinh r}{r}\\
+  \end{array} \right.$
+</p>
+<p>
+  となる。ここで、$(x^2+y^2-z^2 < 0$の場合も含めて)$\,r=\sqrt{x^2+y^2-z^2}$とした。
+</p>
+<p>
+  $-1 \leqq \cosh r < \infty $なので、指数写像は全射にならないことに注意。
+
 <br>
 <a href="../list.html">リー群論へ</a>
 
