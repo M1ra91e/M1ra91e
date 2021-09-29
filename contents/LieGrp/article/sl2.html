@@ -9,66 +9,11 @@
   <title>sl(2,R)の指数写像</title>
 
   <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [['$', '$'], ["\\(", "\\)"]],
-      processEscapes: true
-    },
-    linebreaks: {
-      automatic: true  // はみ出す場合は改行する
-    }
-  });
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_SVG" async></script>
-  <script>
-
-  var delay;
-  window.addEventListener('resize', function() {
-    clearTimeout(delay);
-
-    delay = setTimeout(function() {
-      MathJax.Hub.Queue(['Rerender', MathJax.Hub]);
-    }, 100);
-  });
-
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
   </script>
-
-  <script>
-  (function(window, document) {
-    function main() {
-      var mj = document.createElement('script');
-      mj.type = 'text/javascript';
-      mj.async = true;
-      mj.id = 'MathJax-script';
-      mj.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      document.head.appendChild(mj);
-    }
-
-    var lazyLoad = false;
-    function onLazyLoad() {
-      if (lazyLoad === false) {
-        lazyLoad = true;
-        window.removeEventListener('scroll', onLazyLoad);
-        window.removeEventListener('mousemove', onLazyLoad);
-        window.removeEventListener('mousedown', onLazyLoad);
-        window.removeEventListener('touchstart', onLazyLoad);
-        window.removeEventListener('keydown', onLazyLoad);
-        main();
-      }
-    }
-    window.addEventListener('scroll', onLazyLoad);
-    window.addEventListener('mousemove', onLazyLoad);
-    window.addEventListener('mousedown', onLazyLoad);
-    window.addEventListener('touchstart', onLazyLoad);
-    window.addEventListener('keydown', onLazyLoad);
-    window.addEventListener('load', function() {
-      if (window.pageYOffset) {
-        onLazyLoad();
-      }
-    });
-  })(window, document);
-  </script>
-
 
 
 </head>
