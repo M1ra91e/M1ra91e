@@ -171,6 +171,10 @@ overflow-x: auto;
   margin-top: 80px;
 }
 
+.ublank60{
+  margin-top: 60px
+}
+
 .ublank20{
   margin-top: 20px;
 }
@@ -178,4 +182,8 @@ overflow-x: auto;
 
 .ublank10{
   margin-top: 10px;
+}
+
+.blank10{
+  margin: 10px;
 }
