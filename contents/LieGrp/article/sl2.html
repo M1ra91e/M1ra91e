@@ -38,7 +38,7 @@
   $\mathfrak{sl}(2)$の特殊事情により、計算結果が馴染み深い関数
   のみで書けることが分かります。</p>
 
-<h3>定式化</h3>
+<h3>定義</h3>
 <p>
   $\mathfrak{sl}(2,\mathbb{R})=\{X\in M(2,\mathbb{R}) \;; \mathrm{tr}X=0\}$<br>
   $SL(2,\mathbb{R})=\{X\in M(2,\mathbb{R}) \;; \det X=1\}$
@@ -48,15 +48,16 @@
 <p>
 $\exp \:: \mathfrak{sl}(2,\mathbb{R})\rightarrow SL(2,\mathbb{R})$
 
-を、$\exp X = \displaystyle\sum_{n=1}^{\infty} \displaystyle\frac{X^n}{n!}$で定める。</p>
+を、$\exp X = \displaystyle\sum_{n=1}^{\infty} \displaystyle\frac{X^n}{n!}$で定めます。</p>
+
 <p>
   また、$\displaystyle\sum_{n=0}^{\infty}
   \displaystyle\frac{x^n}{(2n)!}$、
   $\displaystyle\sum_{n=0}^{\infty}
   \displaystyle\frac{x^n}{(2n+1)!}\,$を、
-  各々、$\cosh\sqrt{x}\,$、$\displaystyle\frac{\sinh\sqrt{x}}{\sqrt{x}}\,$と書く。<br>
+  各々、$\cosh\sqrt{x}\,$、$\displaystyle\frac{\sinh\sqrt{x}}{\sqrt{x}}\,$と書きます。<br>
 　$x < 0 \,$のとき、$\cosh\sqrt{x}=\cos \sqrt{-x}$、$\displaystyle\frac{\sinh\sqrt{x}}{\sqrt{x}}=\frac{\sin \sqrt{-x}}{\sqrt{x}}$
- である。
+ となります。
 </p>
 
 <h3>計算</h3>
@@ -64,7 +65,7 @@ $\exp \:: \mathfrak{sl}(2,\mathbb{R})\rightarrow SL(2,\mathbb{R})$
 <div class="title">($\mathfrak{sl}(2,\mathbb{R})$の指数写像)</div>
 <p>
 
-<div class="hblank">
+<div class="blank80">
 $\exp \begin{pmatrix}
 x & y-z \\
 y+z & -x \\
@@ -154,7 +155,7 @@ $
     \,\middle|
     \,W^2-X^2-Y^2+Z^2=1
         \right\}$</div>
-        とみなす。
+        とみなします。
 </p>
 <p>
   この表示のもと、
@@ -174,12 +175,58 @@ $
   \end{array} \right.$
 </p>
 <p>
-  となる。ここで、$(x^2+y^2-z^2 < 0$の場合も含めて)$\,r=\sqrt{x^2+y^2-z^2}$とした。
+  と書けます。ここで、$(x^2+y^2-z^2 < 0$の場合も含めて)$\,r=\sqrt{x^2+y^2-z^2}$としました。
 </p>
 <p>
-  $-1 \leqq \cosh r < \infty $なので、指数写像は全射にならないことに注意。
+  曲線
+  $\gamma (t)=\exp t
+  \begin{pmatrix}
+  x & y-z \\
+  y+z & -x\\
+  \end{pmatrix}
+  $
+  の族を図示してみましょう。<br>
+以下のようになります。</p>
 
-<br>
+<p>
+<img src="sl.jpg" width=50%>
+
+</p>
+<p>
+
+  この曲線族は、$g=dw^2-dx^2-dy^2+dz^2$という(擬)計量に関する測地線になるので、以下測地線と呼ぶことにします。<br>
+
+</p>
+<p>
+  さて、この図も合わせて観察をしてみましょう。<br>
+  図と式をよく見ると、測地線の性格が、3通りあるのが分かります。<br>
+  3通りを具体的に書くと、</p>
+  <p>
+  <div class="blank80">(i)$x^2+y^2-z^2 > 0　$のとき、すなわち$r$が正の実数のとき</div>
+  $\gamma(t)$は<br>
+  $\left\{ \begin{array}{l}
+  \displaystyle W = \cosh tr \\
+  \displaystyle X = x\frac{\sinh tr}{r}\\
+  \displaystyle Y = y \frac{\sinh tr}{r}\\
+  \displaystyle Z = z\frac{\sinh tr}{r}\\
+  \end{array} \right.$<br>
+  となり、測地線は放物線型を描きます。<br>
+  (上図では、暖色系で書いた部分がこれにあたります。)
+</p>
+<p>
+  <div class="blank80">(ii)$x^2+y^2-z^2=0$のとき、すなわち$\,r=0\,$のとき</div>
+$\gamma (t )$は、<br>
+$\left\{ \begin{array}{l}
+\displaystyle W = 1 \\
+\displaystyle X = tx\\
+\displaystyle Y = ty\\
+\displaystyle Z = tz\\
+\end{array} \right.$<br>
+となり、測地線は直線を描きます。<br>
+(上図では、黄緑で書いた線がこれにあたります。)
+</p>
+
+
 <a href="../list.html">リー群論へ</a>
 
 </body>
