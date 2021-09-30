@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/chusen.css">
+  <link rel="stylesheet" href="../../../css/article.css">
+  <link rel="stylesheet" href="../../../css/header.css">
+  <title>中線定理と内積空間</title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
+  </script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+</head>
+
+<header>
+<h1>数学処 らぷらし庵</h1>
+<nav class="pc-nav">
+  <ul>
+    <li><a href="../../../index.html">トップページ</a>
+    <li><a href="../../../article.html">記事</a>
+    <li><a href="../../../ex.html">演習問題</a>
+    <li><a href="../../../link.html">リンク</a>
+  </ul>
+</nav>
+</header>
+
+<body>
+
+  <h2>中線定理と内積空間</h2>
+  <p>このページでは、"中線定理が成り立つノルム空間は、実は内積空間である"ことを証明します。<br>
+    実際に取り組んでみるとわかりますが、一筋縄ではいきません。</p>
+
+<h3>定義</h3>
+<div class="bblank20">ノルム空間と、内積空間の定義を確認しておきましょう。</div>
+
+<div class="def">
+  <div class="title">(ノルム空間)</div>
+    <div class="blank20">$\mathbb{K}$を$\mathbb{R}$または$\mathbb{C}$とし、$V$を$\mathbb{K}$上のベクトル空間とする。</div>
+<p>$V$上の<span class="bold">ノルム</span>とは、写像$\,\|-\|\,:\,V \rightarrow \mathbb{R}$であって、
+  以下を満たすもののことである。</p>
+  <div class="norm">
+  <ol>
+    <li>(正定値性)
+      <div class="blank10">任意の$v\in V$に対し、$\| v \|\geqq0$であり、
+        かつ$\|v\|=0\Leftrightarrow v=0$が成り立つ。</div></li>
+
+    <li>(斉次性)
+    <div class="blank10">任意の$a\in K$、$v\in V$に対し、$\|av\|=|a|\|v\|$が成り立つ。</div></li>
+
+　　<li>(三角不等式)
+  　　<div class="blank10">任意の$v,w\in V$に対し、$\|v+w\|\leqq\|v\|+\|w\|$が成り立つ。</div></li>
+    </ol>
+
+    <div class="ublank40">ノルムを備えたベクトル空間$(V,\|-\|)$を<span class="bold">ノルム空間</span>という。
+
+    </div>
+    </div>
+
+
+
+</body>
