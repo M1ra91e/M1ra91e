@@ -9,3 +9,13 @@
   content: "(N" counter(count) ")　";
   counter-increment: count 1;
 }
+
+.metric ol{
+  list-style: none;
+  counter-reset: count 0;
+}
+
+.metric li:before{
+  content: "(I" counter(count) ")　";
+  counter-increment: count 1;
+}
