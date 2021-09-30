@@ -77,12 +77,11 @@ footer{
   font-weight: bold;
 }
 
-.question>*:first-child{
-  display: inline; /*div.theoremの直下は絶対インライン*/
-}
+
 
 .question>.title{
   font-weight: bold; /*お好み装飾*/
+  display: inline;
 }
   .question{
   padding: 0.2em 0.5em;
@@ -142,6 +141,34 @@ footer{
 
 }
 
+
+.def::before{
+  content: "定義";
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+
+.def>.title{
+  font-weight: bold; /*お好み装飾*/
+  display: inline;
+}
+
+
+
+  .def{
+  padding: 0.2em 0.5em;
+  margin: 0em 0;
+  color: #474747;
+  background: whitesmoke;/*背景色*/
+
+}
+
+
+
+
+
 h2{
   margin-left: 10px;
 }
@@ -155,16 +182,30 @@ h3{
   border-bottom: solid 3px gray;
 }
 
-.blank80{
-  line-height: 80px;
-}
+
 
 .horizontal-scroll{
 overflow-x: auto;
 }
 
+.blank80{
+  margin: 80px;
+}
+
+.blank60{
+  margin:60px;
+}
+
 .blank40{
-  line-height: 40px;
+  margin: 40px;
+}
+
+.blank20{
+  margin:20px;
+}
+
+.blank10{
+  margin:10px;
 }
 
 .ublank80{
@@ -172,9 +213,12 @@ overflow-x: auto;
 }
 
 .ublank60{
-  margin-top: 60px
+  margin-top: 60px;
 }
 
+.ublank40{
+  margin-top: 40px;
+}
 .ublank20{
   margin-top: 20px;
 }
@@ -184,6 +228,26 @@ overflow-x: auto;
   margin-top: 10px;
 }
 
-.blank10{
-  margin: 10px;
+.bblank80{
+  margin-bottom: 80px;
+}
+
+.bblank60{
+  margin-bottom: 60px;
+}
+
+.bblank40{
+  margin-bottom: 40px;
+
+}
+.bblank20{
+  margin-bottom: 20px;
+}
+
+.bblank10{
+  margin-bottom: 10px;
+}
+
+.bold{
+  font-weight: bold;
 }
