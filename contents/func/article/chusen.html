@@ -35,12 +35,14 @@
     実際に取り組んでみるとわかりますが、一筋縄ではいきません。</p>
 
 <h3>定義</h3>
-<div class="bblank20">ノルム空間と、内積空間の定義を確認しておきましょう。</div>
+<div class="bblank20">ノルム空間と、内積空間の定義を確認しておきましょう。<br>
+まずは、ノルム空間から。</div>
+
 
 <div class="def">
   <div class="title">(ノルム空間)</div>
     <div class="blank20">$\mathbb{K}$を$\mathbb{R}$または$\mathbb{C}$とし、$V$を$\mathbb{K}$上のベクトル空間とする。</div>
-<p>$V$上の<span class="bold">ノルム</span>とは、写像$\,\|-\|\,:\,V \rightarrow \mathbb{R}$であって、
+<p>$V$上の<span class="bold">ノルム(norm)</span>とは、写像$\,\|-\|\,:\,V \rightarrow \mathbb{R}$であって、
   以下を満たすもののことである。</p>
   <div class="norm">
   <ol>
@@ -55,10 +57,36 @@
   　　<div class="blank10">任意の$v,w\in V$に対し、$\|v+w\|\leqq\|v\|+\|w\|$が成り立つ。</div></li>
     </ol>
 
-    <div class="ublank40">ノルムを備えたベクトル空間$(V,\|-\|)$を<span class="bold">ノルム空間</span>という。
+    <div class="ublank40">ノルムを備えたベクトル空間$(V,\|-\|)$を<span class="bold">ノルム空間(normed space)</span>という。
+    </div>
+    </div>
+    </div>
 
-    </div>
-    </div>
+<div class="blank20">次は内積空間です。</div>
+
+<div class="def">
+  <div class="title">(内積空間)</div>
+  <div class="blank20">$\mathbb{K}$を$\mathbb{R}$または$\mathbb{C}$とし、$V$を$\mathbb{K}$上のベクトル空間とする。</div>
+  <p>$V$上の<span class="bold">内積(inner product)</span>とは、写像$\,(-,-)\,:\,V\times V \rightarrow \mathbb{R}$であって、
+    以下を満たすもののことである。</p>
+    <div class="metric">
+      <ol>
+        <li>(線形性)
+          <div class="blank10">任意の$a,b\in \mathbb{K}$と$u,v,w\in V$に対して、$(au+bv,w)=a(u,w)+b(v,w)$</div></li>
+       <li>(エルミート性)
+         　<div class="blank10">任意の$v,w\in V$に対して、$\displaystyle (v,w)=\overline{(v,w)}$が成り立つ。</div></li>
+        <li>(正定値性)
+         <div class="blank10">任意の$v\in V$に対して、$(v,v)\geqq 0$が成り立ち、かつ$(v,v)=0\Leftrightarrow v=0$である。</div>
+
+        </ol>
+        </div>
+
+    <div class="ublank40">内積を備えたベクトル空間$(V,(-,-))$を<span class="bold">内積空間(inner product space)</span>という。</div>
+
+
+
+
+
 
 
 
