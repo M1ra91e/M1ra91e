@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.norm ol{
+  list-style: none;
+  counter-reset: count 0;
+}
+
+.norm li:before{
+  content: "(N" counter(count) ")　";
+  counter-increment: count 1;
+}
