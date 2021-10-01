@@ -167,10 +167,17 @@ $\|v\|=\sqrt{(v,v)}\,\,(\forall v\in V)$とはならないものが存在する�
 その表示が、考えているノルム空間の"内積候補"になるはずです。</div>
 <div class="theorem">
   <div class="title">(極化恒等式)</div>
-  <div class="blank10">$(V,(-,-))$を内積空間とする。</div>
+  <div class="blank10">$(V,(-,-))$を$\mathbb{R}$上の内積空間とする。</div>
   <p>$v,w\in V$に対して以下が成り立つ。<br>
   <div class="horizontal-scroll">
-  $(v,w)=\displaystyle\frac{1}{4}\{(\|v+w\|^2-\|v-w\|^2)+i(\|v+iw\|^2-\|v-iw\|^2)\}$</p>
+  $(v,w)=\displaystyle\frac{1}{4}(\|v+w\|^2-\|v-w\|^2)$</p>
+</div>
+<div class="ublank20">
+<div class="blank10">$(V,(-,-))$を$\mathbb{C}$上の内積空間とする。</div>
+<p>$v,w\in V$に対して以下が成り立つ。<br>
+<div class="horizontal-scroll">
+$(v,w)=\displaystyle\frac{1}{4}\{(\|v+w\|^2-\|v-w\|^2)+i(\|v+iw\|^2-\|v-iw\|^2)\}$</p>
+</div>
 </div>
 </div>
 
@@ -188,22 +195,48 @@ $\|v\|=\sqrt{(v,v)}\,\,(\forall v\in V)$とはならないものが存在する�
 <h3>証明</h3>
 <div class="theorem">
   <div class="title">(中線定理と内積空間)</div>
-  <div class="blank10">$(V,\|-\|)$をノルム空間とする。</div>
+  <div class="blank10">$(V,\|-\|)$を$\mathbb{K}$上のノルム空間とする。</div>
 
   <p>$(V,\|-\|)$上で中線定理が成り立つとき、
-    <div class="horizontal-scroll">
-    $(v,w)=\displaystyle\frac{1}{4}\{(\|v+w\|^2-\|v-w\|^2)+i(\|v+iw\|^2-\|v-iw\|^2)\}$</p>
-  </div>
-  とすると、$(V,(-,-))$は内積空間となり、<br>
-  これから得られるノルム空間は、$(V,\|-\|)$と一致する。
+
+    $(v,w)$を極化恒等式の右辺により定めると、<br>
+
+  $(V,(-,-))$は内積空間となり、
+  これから得られるノルム空間は、$(V,\|-\|)\,$と一致する。
 </div>
 
 <div class="proof">
 <div class="blank10">
-内積の公理を確認していく。
+内積の公理を確認すればよい。<br>
+$\mathbb{K}$が$\mathbb{R}$の場合と$\mathbb{C}$の場合の証明は、ほとんど同じなので、<br>
+$\mathbb{K}=\mathbb{C}$とする。<br>
 </div>
 
-<p>エルミート性<br>
+<div class="horizontal-scroll">
+  $(v,w)=\displaystyle\frac{1}{4}\{(\|v+w\|^2-\|v-w\|^2)+i(\|v+iw\|^2-\|v-iw\|^2)\}\,$だった。
+</div>
+
+
+<p>$4\mathrm{Re}(v,w)=\|v+w\|^2-\|v-w\|^2$<br>
+  $4\mathrm{Im}(v,w)=\|v+iw\|^2-\|v-iw\|^2$<br>
+  から、エルミート性と正定値性がわかる。</p>
+<p>あとは線形性を示せば良いが、同じ式から、<br>
+  $(-v,w)=-(v,w)$　と、<br>
+  $(iv,w)=i(v,w)$<br>
+  がわかるので、</p>
+
+<p>あとは、<br>
+  $(au,v)=a(u,v)　(\forall a\geqq 0)$<br>
+  $(u+v,w)=(u,w)+(v,w)$を示せばよい。</p>
+
+  <div class="ublank40">
+    $4\mathrm{Re}(au,v)-4\mathrm{Re}(a(u,v))$<br>
+    $=\|
+    $
+
+
+</div>
+
   (準備中)
 
 
