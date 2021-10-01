@@ -154,4 +154,59 @@ $\|v\|=\sqrt{(v,v)}\,\,(\forall v\in V)$とはならないものが存在する�
   </div>
 
 <p>答えはyesです。</p>
+
+<h3>準備</h3>
+<p>目標は以下です。</p>
+<div class="theorem"><div class="title">(中線定理と内積空間)</div>
+<p>中線定理を満たすようなノルム空間は、内積空間から得られる。</p>
+</div>
+
+<div class="ublank40">準備をします。</div>
+<div class="ublank10">
+内積空間で、内積をノルムの言葉だけで書いてみます。<br>
+その表示が、考えているノルム空間の"内積候補"になるはずです。</div>
+<div class="theorem">
+  <div class="title">(極化恒等式)</div>
+  <div class="blank10">$(V,(-,-))$を内積空間とする。</div>
+  <p>$v,w\in V$に対して以下が成り立つ。<br>
+  <div class="horizontal-scroll">
+  $(v,w)=\displaystyle\frac{1}{4}\{(\|v+w\|^2-\|v-w\|^2)+i(\|v+iw\|^2-\|v-iw\|^2)\}$</p>
+</div>
+</div>
+
+<div class="proof">
+  <p>
+    余弦定理から、<br>
+    $\|v+w\|^2=\|v\|^2+2\mathrm{Re}(v,w)+\|w\|^2$<br>
+    $\|v-w\|^2=\|v\|^2-2\mathrm{Re}(v,w)+\|w\|^2$<br>
+    $\|v+iw\|^2=\|v\|^2+2\mathrm{Im}(v,w)+\|w\|^2$<br>
+    $\|v-iw\|^2=\|v\|^2-2\mathrm{Im}(v,w)+\|w\|^2$<br>
+    より結論を得る。
+  </p>
+</div>
+
+<h3>証明</h3>
+<div class="theorem">
+  <div class="title">(中線定理と内積空間)</div>
+  <div class="blank10">$(V,\|-\|)$をノルム空間とする。</div>
+
+  <p>$(V,\|-\|)$上で中線定理が成り立つとき、
+    <div class="horizontal-scroll">
+    $(v,w)=\displaystyle\frac{1}{4}\{(\|v+w\|^2-\|v-w\|^2)+i(\|v+iw\|^2-\|v-iw\|^2)\}$</p>
+  </div>
+  とすると、$(V,(-,-))$は内積空間となり、<br>
+  これから得られるノルム空間は、$(V,\|-\|)$と一致する。
+</div>
+
+<div class="proof">
+<div class="blank10">
+内積の公理を確認していく。
+</div>
+
+
+</div>
+
+
+
+
 </body>
