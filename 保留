@@ -1,3 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/chusen.css">
+  <link rel="stylesheet" href="../../../css/article.css">
+  <link rel="stylesheet" href="../../../css/header.css">
+  <title>中線定理と内積空間</title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
+  </script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+</head>
+
+<header>
+<h1>数学処 らぷらし庵</h1>
+<nav class="pc-nav">
+  <ul>
+    <li><a href="../../../index.html">トップページ</a>
+    <li><a href="../../../article.html">記事</a>
+    <li><a href="../../../ex.html">演習問題</a>
+    <li><a href="../../../link.html">リンク</a>
+  </ul>
+</nav>
+</header>
+
+<body>
+
+  <h2>中線定理と内積空間</h2>
+  <p>このページでは、ノルム空間において、"中線定理が成り立つこと”と、”ノルムと整合する内積の存在"が同値であることを証明します。<br>
+    実際に取り組んでみるとわかりますが、一筋縄ではいきません。</p>
+
+<h3>定義</h3>
+<div class="bblank20">ノルム空間と、内積空間の定義を確認しておきましょう。<br>
+まずは、ノルム空間から。</div>
+
+
+<div class="def">
+  <div class="title">(ノルム空間)</div>
+    <div class="blank20">$\mathbb{K}$を$\mathbb{R}$または$\mathbb{C}$とし、$V$を$\mathbb{K}$上のベクトル空間とする。</div>
+<p>$V$上の<span class="bold">ノルム(norm)</span>とは、写像$\,\|-\|\,:\,V \rightarrow \mathbb{R}$であって、
+  以下を満たすもののことである。</p>
+  <div class="norm">
+  <ol>
+    <li>(正定値性)
+      <div class="blank10">任意の$v\in V$に対し、$\| v \|\geqq0$であり、
+        かつ$\|v\|=0\Leftrightarrow v=0$が成り立つ。</div></li>
+
+    <li>(斉次性)
+    <div class="blank10">任意の$a\in K$、$v\in V$に対し、$\|av\|=|a|\|v\|$が成り立つ。</div></li>
+
+　　<li>(三角不等式)
+  　　<div class="blank10">任意の$v,w\in V$に対し、$\|v+w\|\leqq\|v\|+\|w\|$が成り立つ。</div></li>
+    </ol>
+
+    <div class="ublank40">ノルムを備えたベクトル空間$(V,\|-\|)$を<span class="bold">ノルム空間(normed space)</span>という。
+    </div>
+    </div>
+    </div>
+
+<div class="blank20">次は内積空間です。</div>
+
+<div class="def">
+  <div class="title">(内積空間)</div>
+  <div class="blank20">$\mathbb{K}$を$\mathbb{R}$または$\mathbb{C}$とし、$V$を$\mathbb{K}$上のベクトル空間とする。</div>
+  <p>$V$上の<span class="bold">内積(inner product)</span>とは、写像$\,(-,-)\,:\,V\times V \rightarrow \mathbb{R}$であって、
+    以下を満たすもののことである。</p>
+    <div class="metric">
+      <ol>
+        <li>(線形性)
+          <div class="blank10">任意の$a,b\in \mathbb{K}$と$u,v,w\in V$に対して、$(au+bv,w)=a(u,w)+b(v,w)$</div></li>
+       <li>(エルミート性)
+         　<div class="blank10">任意の$v,w\in V$に対して、$\displaystyle (v,w)=\overline{(v,w)}$が成り立つ。</div></li>
+        <li>(正定値性)
+         <div class="blank10">任意の$v\in V$に対して、$(v,v)\geqq 0$が成り立ち、かつ$(v,v)=0\Leftrightarrow v=0$である。</div>
+
+        </ol>
+        </div>
+
+    <div class="ublank40">内積を備えたベクトル空間$(V,(-,-))$を<span class="bold">内積空間(inner product space)</span>という。</div>
+
+</div>
+
+
+<h3>定理を考える動機</h3>
+
+<p>定理を考える動機について触れておきましょう。<br>
+まず内積空間について以下が成り立っていたのでした。</p>
+<div class="theorem">
+  <div class="title">(内積空間には自然なノルムが存在する)</div>
+  <p>$(V,(-,-))$を内積空間とする。</p>
+  <p>$\|v\|=\sqrt{(v,v)}$とすると、$(V,\|-\|)$はノルム空間になる。</p>
+</div>
+
+<p>しかしこの逆は成り立ちません。<br>
+つまり、</p>
+
+<div class="prop">
+  <div class="title">(ノルムはいつも内積から得られているとは限らない)</div>
+  <p>ノルム空間$(V,\|-\|)$であって、どんな内積$(-,-)$を選んでも、
+$\|v\|=\sqrt{(v,v)}\,\,(\forall v\in V)$とはならないものが存在する。
+</div>
+<p>という命題が成り立ちます。<br>
+これを示すには、どうすれば良いでしょうか？</p>
+<div class="ublank40">例えば、背理法を使うという手が考えられます。<br>
+すなわち、"内積空間なら成り立つはずの定理"があるノルム空間では成り立たないことを示せば良いわけです。</div>
+<p>では、その"定理"には、何を採用すれば良いでしょう？<br>
+  それは例えば、"角度"が本質的な役割を持つ定理であって、
+  それでいて"長さ"の情報だけで書けているようなものが望ましいと思います。</p>
+
+<div class="ublank40">ここでは以下の中線定理を採用します。</div>
+<div class="theorem">
+  <div class="title">(中線定理)</div>
+  <p>$(V,(-,-))$を内積空間とする。$v,w\in V$に対して以下が成り立つ。<br>
+    $\|v+w\|^2+\|v-w\|^2=2(\|v\|^2+\|w\|^2)$</p>
+  </div>
+  <div class="proof">
+    <p>余弦定理から、<br>
+      $\|v+w\|^2=\|v\|^2+2 \mathrm{Re} (v,w)+\|w\|^2$<br>
+      $\|v-w\|^2=\|v\|^2-2 \mathrm{Re} (v,w)+\|w\|^2$<br>
+      両辺を足して結論を得る。
+  </div>
+
+  <p>証明から判る通り、中線定理は余弦定理から効率的に内積に依存する項を消したものになっています。<br>
+  そういう理由で、求めていたような特性を持つ定理になっているというわけです。</p>
+
+  <div class="ublank40">さて、これを用いて反例の構成を行いましょう。</div>
+  <div class="theorem">
+    <p>$V=\mathbb{K}^2$とし、$\|-\|_{\infty}$を、$\|(z,w)\|_{\infty}=\mathrm{max}(|z|,|w|)$で定めると、$(V,\|-\|_{\infty})$
+      はノルム空間になる。<br>
+      <div class="ublank20">$(V,\|-\|_{\infty})$は内積空間からは得られない。</div>
+</p>
+  </div>
+
+  <div class="proof">
+    <p>そのような内積空間が存在するとすると、$\|-\|_{\infty}$は中線定理を満たす。</p>
+    <div class="ublank10">
+      しかし、
+    例えば$v=(1,0),\,w=(0,1)$とすると、<br>
+    $$\|v+w\|_{\infty}=\|v-w\|_{\infty}=\|v\|_{\infty}=\|w\|_{\infty}=1$$<br>
+    となり、中線定理は成り立たない。
+  </div>
+
+  </div>
+
+  <div class="ublank60">
+さて、今の結果を受けて、今度は次のような疑問が湧いてきます。</div>
+<div class="question">
+  <p>中線定理を満たすようなノルム空間は、全て内積空間から得られるか？</p>
+  </div>
+
+<p>答えはyesです。</p>
+
+<h3>準備</h3>
+<p>目標は以下です。</p>
+<div class="theorem"><div class="title">(中線定理と内積空間)</div>
+<p>中線定理を満たすようなノルム空間は、内積空間から得られる。</p>
+</div>
+
+<div class="ublank40">準備をします。</div>
+<div class="ublank10">
+内積空間で、内積をノルムの言葉だけで書いてみます。<br>
+その表示が、考えているノルム空間の"内積候補"になるはずです。</div>
+<div class="theorem">
+  <div class="title">(極化恒等式)</div>
+  <div class="blank10">$(V,(-,-))$を$\mathbb{R}$上の内積空間とする。</div>
+  <p>$v,w\in V$に対して以下が成り立つ。<br>
+  <div class="horizontal-scroll">
+  $(v,w)=\displaystyle\frac{1}{4}(\|v+w\|^2-\|v-w\|^2)$</p>
+</div>
+<div class="ublank40">
+<div class="blank10">$(V,(-,-))$を$\mathbb{C}$上の内積空間とする。</div>
+<p>$v,w\in V$に対して以下が成り立つ。<br>
+<div class="horizontal-scroll">
+$(v,w)=\displaystyle\frac{1}{4}\{(\|v+w\|^2-\|v-w\|^2)+i(\|v+iw\|^2-\|v-iw\|^2)\}$</p>
+</div>
+</div>
+</div>
+
+<div class="proof">
+  <p>
+    余弦定理から、<br>
+    $\|v+w\|^2=\|v\|^2+2\mathrm{Re}(v,w)+\|w\|^2$<br>
+    $\|v-w\|^2=\|v\|^2-2\mathrm{Re}(v,w)+\|w\|^2$<br>
+    $\|v+iw\|^2=\|v\|^2+2\mathrm{Im}(v,w)+\|w\|^2$<br>
+    $\|v-iw\|^2=\|v\|^2-2\mathrm{Im}(v,w)+\|w\|^2$<br>
+    より結論を得る。
+  </p>
+</div>
+
 <h3>証明</h3>
 <div class="theorem">
   <div class="title">(中線定理と内積空間)</div>
@@ -132,3 +326,7 @@ $\mathbb{K}=\mathbb{C}$とする。<br>
 
 
 </body>
+
+
+
+/Users/aoyamatenma/Documents/GitHub/M1ra91e/contents/func/list.html
