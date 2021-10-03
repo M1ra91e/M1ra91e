@@ -32,7 +32,7 @@
 
   <h2>中線定理と内積空間</h2>
   <p>このページでは、ノルム空間において、"中線定理が成り立つこと”と、”ノルムと整合する内積の存在"が同値であることを証明します。<br>
-    実際に取り組んでみるとわかりますが、一筋縄ではいきません。</p>
+    </p>
 
 <h3>定義</h3>
 <div class="bblank20">ノルム空間と、内積空間の定義を確認しておきましょう。<br>
@@ -222,13 +222,49 @@ $\mathbb{K}=\mathbb{C}$とする。<br>
   $4\mathrm{Im}(v,w)=\|v+iw\|^2-\|v-iw\|^2$<br>
   から、エルミート性と正定値性がわかる。</p>
 <p>あとは線形性を示せば良いが、同じ式から、<br>
-  $(-v,w)=-(v,w)$　と、<br>
+  $(-v,w)=-(v,w)$　<br>
   $(iv,w)=i(v,w)$<br>
-  がわかる。</p>
+  $(0,w)=0$<br>
+  等がわかる。</p>
 
 
 
+<p>これらに加えて、<br>
+  $(u+v,w)=(u,w)+(v,w)$<br>
+  がわかればよい。</p>
 
+<div class="ublank40">
+
+<p>実際、残りは<br>
+  $(av,w)=a(v,w)　(\forall a\in \mathbb{C})$を示せばよいが、</p>
+
+<p>$(u+v,w)=(u,w)+(v,w)$を繰り返し用いることで、<br>
+  $(av,w)=a(v,w)　(\forall a \in \mathbb{Q})$がわかる。</p>
+  <p>連続性から、<br>
+  $(av,w)=a(v,w)　(\forall a\in \mathbb{R})$</p>
+  <p>$(iv,w)=i(v,w)$と合わせて、<br>
+  $(av,w)=a(v,w)　(\forall a\in \mathbb{C})$となる。</p>
+
+</div>
+
+<div class="ublank40">
+  <p>$(u+v,w)=(u,w)+(v,w)$を示そう。</p>
+  <div class="hrozontal-scroll"><div class="blank5">$8\mathrm{Re}(u,w)+8\mathrm{Re}(v,w)$</div></div>
+  <div class="hrozontal-scroll"><div class="blank5">=$2\|u+w\|^2+2\|v+w\|^2-2\|u-w\|^2-2\|v-w\|^2$</div></div>
+  <div class="hrozontal-scroll"><div class="blank5">$=\|u+v+2w\|^2+\|u-v\|^2-\|u+v-2w\|^2-\|u-v\|^2$</div></div>
+  <div class="hrozontal-scroll"><div class="blank5">$=\|u+v+2w\|^2-\|u+v-2w\|^2$</div></div>
+  <div class="hrozontal-scroll"><div class="blank5">$=4\mathrm{Re}(u+v,2w)$</div></div>
+</div>
+<p>
+  より、$\mathrm{Re}(u+v,2w)=2\mathrm{Re}(u,w)+2\mathrm{Re}(v,w)$を得る。</p>
+  <p>$u=0$として、<br>
+    $\mathrm{Re}(v,2w)=2\mathrm{Re}(v,w)$<br>
+   $\mathrm{Re}(u+v,w)=\mathrm{Re}(u,w)+\mathrm{Re}(v,w)$がわかる。</p>
+
+   <p>$\mathrm{Re}(v,iw)=\mathrm{Im} (v,w)$から、<br>
+     $\mathrm{Im}(u+v,w)=\mathrm{Im}(u,w)+\mathrm{Im}(v,w)$もわかり、</p>
+   <p>
+     $(u+v,w)=(u,w)+(v,w)\,$が示された。</p>
 
 </div>
 
@@ -240,18 +276,17 @@ $\mathbb{K}=\mathbb{C}$とする。<br>
 新井朝雄, 江沢洋『量子力学の数学的構造Ⅰ』<br>
 (この2冊には、証明は載っていません。)<br></p>
 <p>
-  Wikipediaの極化恒等式のページ<br>
+  高村多賀子『函数解析入門』
 </p>
 <p>僕はまだ読んでいませんが、宮寺功『函数解析』には証明が載っているそうです。
 </p>
 
 <h3>感想</h3>
 <p>
-本記事では、中線定理と内積空間の関係について証明しました。<br>
-線形性の証明が、ただ等式変形をすればできるという類のものではなく、大変だと感じました。<br>
+  この記事を書きながら、
   もし仮に我々が"角度"を知らない生き物だったとしたら、極化恒等式の右辺が線型写像になることは、
-  驚きの事実なのではないだろうかと思います。<br>
-  数学をやる上での直感の大切さを感じるとともに、
+  発見の難しい事実だろうなと感じました。<br>
+  数学をやる上での直感の大切さを改めて感じるとともに、
   まだ人類の直感が及ばない領域に豊かな数学が眠っているのかもしれないななどとも考えました。
 
 </p>
