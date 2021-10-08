@@ -125,7 +125,7 @@
     margin: 0 0 0 auto;
   }
 
-  a:hover{
+  header a:hover{
     color: royalblue;
     text-decoration: underline;
 
