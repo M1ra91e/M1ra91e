@@ -40,3 +40,15 @@ h3:after {
 
 
 }
+
+.box {
+  width: 100%;                /* 横幅を200pxに指定 */
+  height: 300px;               /* 横幅を200pxに指定 */
+  border: 2px solid #000;      /* わかりやすくボーダーを引く */
+  overflow-y: scroll;          /* 縦方向にスクロール可能にする */
+}
+
+.new{
+  margin-top: 60px;
+  font-weight: bold;
+}
