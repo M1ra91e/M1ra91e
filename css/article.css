@@ -94,7 +94,7 @@ footer{
   padding: 0.2em 0.5em;
   margin: 1em 1;
 
-  border-left: double 7px #4ec4d3;/*左線*/
+  border-left: solid 2px black;/*左線*/
 
 }
 .solution::before{
