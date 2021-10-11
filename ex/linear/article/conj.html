@@ -26,7 +26,72 @@
 </header>
 <body>
 
+<h2>共役作用による線形環の商空間</h2>
 
+<div class="question">
+  <p>
+  実行列環$M(n,\mathbb{R})$を一般線形群$GL(n,\mathbb{R})$の共役作用$ g\cdot A=gAg^{-1}$で割った空間を$X$とする。
+  $n\geqq 2$のとき、$X$はハウスドルフ空間ではないことを示してください。
+  </p>
+</div>
+<div class="proof">
+<p>
+  最初に、$n=2$の場合を考える。</p>
+<div class="bblank40">
+  $p\,:\,M(2,\mathbb{R})\rightarrow X$を自然な射影、
+$I_{2}=\begin{pmatrix}
+1 & 0 \\
+0 & 1 \\
+\end{pmatrix}$、
+  $J_{2}=\begin{pmatrix}
+  1 & 1 \\
+  0 & 1 \\
+  \end{pmatrix}$とする。<br>
+  $p(I_{2})\,$の任意の開近傍$U$を取る。</div>
+
+  <p>商位相の定義から$\,p^{-1}(U)\,$は、
+    $I_{2}$の開近傍である。<br>
+  ところで、$
+  \begin{pmatrix}
+  \frac{1}{n} & 0 \\
+  0 & 1 \\
+  \end{pmatrix}
+  \begin{pmatrix}
+  1 & 1 \\
+  0 & 1 \\
+  \end{pmatrix}
+  \begin{pmatrix}
+  n & 0 \\
+  0 & 1 \\
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+  1 & \frac{1}{n} \\
+  0 & 1 \\
+  \end{pmatrix}$
+  なので、</p>
+  <div class="bblank40">
+  $I_{2}$
+  のどれだけ近くにも、
+  $J_{2}$と共役な元が存在する。<br>
+  特に、
+  $p^{-1}(U)\cap p^{-1}(
+J_{2})
+  ≠
+  \phi$である。<br>
+  したがって、
+  $p(J_{2})\in U$。
+</div>
+<p>
+  これで、$p(I_{2})$の任意の開近傍に、
+  $p(J_{2})
+  $が属することがわかった。<br>
+  特に、$X$はハウスドルフ空間ではない。</p>
+
+<p>$n>3$の場合も、
+  $I_{n}$と$J_{2}\oplus I_{n-2}$に同じ議論を適用すれば良い。</p>
+
+</div>
 
 
 <a href="../../../index.html">トップページへ</a><br>
