@@ -9,6 +9,7 @@
 
   html {
     box-sizing: border-box;
+
   }
 
   body {
@@ -16,6 +17,7 @@
      padding: 120px 0px 10px;
      font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
      background-color: white;
+
   }
 
 
@@ -77,6 +79,7 @@
 
   html {
     box-sizing: border-box;
+    z-index: 0;
   }
 
   body {
@@ -84,6 +87,7 @@
      padding: 100px 0px 10px;
      font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
      background-color: white;
+     z-index: 0;
   }
 
 
