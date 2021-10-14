@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+body{
+  z-index: 0;
+}
 
 .acd-check{
     display: none;
@@ -26,3 +29,255 @@
     padding: 7px;
     visibility: visible;
 }
+
+
+.accordion-container {
+  position: relative;
+  width: 100%;
+  border: 1px solid white;
+  border-top: none;
+  outline: 0;
+  cursor: pointer
+
+}
+
+.accordion-container .accordion-title {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0.625em 0.625em 0.625em 2em;
+  font-size: 1.25em;
+  font-weight: normal;
+  color: black;
+  background: white;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+
+.accordion-container .accordion-title:hover,
+.accordion-container .accordion-title:active,
+.accordion-container .content-entry.open .accordion-title {
+  background-color: white;
+  color: black;
+
+}
+
+.accordion-container .accordion-title:hover i:before,
+.accordion-container .accordion-title:hover i:active,
+.accordion-container .content-entry.open i {
+  color: white;
+}
+
+.accordion-title{
+  position: relative;
+
+}
+
+.accordion-title:after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 38%;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: solid 2px black;
+  border-right: solid 2px ;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+
+}
+
+.accordion-title.open:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 45%;
+}
+
+.accordion-content {
+  position: relative;
+  display: none;
+  padding-left: 2.3125em;
+
+}
+
+/* CSS for CodePen */
+.accordion-container {
+  position: relative;
+  width: 90%;
+  margin: 1.875em auto;
+
+}
+
+.tooltip2{
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+
+}
+.tooltip2 p{
+    margin:15px 0px 15px 0px;
+    padding:0;
+
+}
+.description2 {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 1.6em;
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+    width: 400px;
+    border: 1px solid black;
+
+}
+
+.description2::before{
+  content: "内容：";
+  font-weight: bold;
+
+}
+
+.tooltip2:hover .description2{
+    display: inline-block;
+    top: 40px;
+    left: 50px;
+    z-index: 1;
+}
+
+
+
+
+
+
+.tooltip3{
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+
+}
+.tooltip3 p{
+    margin:15px 0px 15px 0px;
+    padding:0;
+
+}
+.description3 {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    
+    line-height: 1.6em;
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+    width: 400px;
+    border: 1px solid black;
+
+}
+
+.description3::before{
+  content: "問題：";
+  font-weight: bold;
+
+}
+
+.tooltip3:hover .description3{
+    display: inline-block;
+    top: 40px;
+    left: 50px;
+    z-index: 1;
+}
+
+
+@media screen and (min-width:480px) {
+
+body {
+     margin: 0;
+     padding: 0;
+   }
+   .css-fukidashi {
+     padding: 0;
+     margin: 0;
+   }
+   .text {
+     width: auto;
+     position: relative;
+     margin:0px 0px 0px 0px;
+
+
+   }
+   .fukidashi {
+     display: none;
+     width: auto;
+     position: absolute;
+     top: 0;
+     left: 250px;
+     padding: 16px;
+     border-radius: 5px;
+     background: white;
+     color: black;
+     font-weight: normal;
+     border: 1px solid black;
+   }
+
+
+
+   .text:hover + .fukidashi {
+     display: block;
+   }
+
+   .fukidashi::before{
+     content: "内容：";
+     font-weight: bold;
+   }
+
+ }
+
+ @media screen and (max-width:480px) {
+
+   body {
+        margin: 0;
+        padding: 0;
+      }
+      .css-fukidashi {
+        padding: 0;
+        margin: 0;
+      }
+      .text {
+        width: auto;
+        position: relative;
+        margin:0px 0px 0px 0px;
+
+
+      }
+      .fukidashi {
+        display: none;
+        width: auto;
+        position: absolute;
+        top: 0;
+        left: 250px;
+        padding: 16px;
+        border-radius: 5px;
+        background: white;
+        color: black;
+        font-weight: normal;
+        border: 1px solid black;
+      }
+
+
+
+      .text:hover + .fukidashi {
+        display: block;
+      }
+
+      .fukidashi::before{
+        content: "内容：";
+        font-weight: bold;
+      }
+
+    }
+
+ }
