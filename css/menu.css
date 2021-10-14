@@ -4,31 +4,7 @@ body{
   z-index: 0;
 }
 
-.acd-check{
-    display: none;
-}
-.acd-label{
-    background: #333;
-    color: #fff;
-    display: block;
-    margin-bottom: 0px;
-    padding: 10px;
-}
-.acd-content{
-    border: 1px solid #333;
-    height: 0;
-    opacity: 0;
-    margin: 0;
-    padding: 0 0px;
-    transition: 0s;
-    visibility: hidden;
-}
-.acd-check:checked + .acd-label + .acd-content{
-    height: auto;
-    opacity: 1;
-    padding: 7px;
-    visibility: visible;
-}
+
 
 
 .accordion-container {
@@ -194,90 +170,9 @@ body{
 
 @media screen and (min-width:480px) {
 
-body {
-     margin: 0;
-     padding: 0;
-   }
-   .css-fukidashi {
-     padding: 0;
-     margin: 0;
-   }
-   .text {
-     width: auto;
-     position: relative;
-     margin:0px 0px 0px 0px;
-
-
-   }
-   .fukidashi {
-     display: none;
-     width: auto;
-     position: absolute;
-     top: 0;
-     left: 250px;
-     padding: 16px;
-     border-radius: 5px;
-     background: white;
-     color: black;
-     font-weight: normal;
-     border: 1px solid black;
-   }
-
-
-
-   .text:hover + .fukidashi {
-     display: block;
-   }
-
-   .fukidashi::before{
-     content: "内容：";
-     font-weight: bold;
-   }
-
- }
+}
 
  @media screen and (max-width:480px) {
 
-   body {
-        margin: 0;
-        padding: 0;
-      }
-      .css-fukidashi {
-        padding: 0;
-        margin: 0;
-      }
-      .text {
-        width: auto;
-        position: relative;
-        margin:0px 0px 0px 0px;
-
-
-      }
-      .fukidashi {
-        display: none;
-        width: auto;
-        position: absolute;
-        top: 0;
-        left: 250px;
-        padding: 16px;
-        border-radius: 5px;
-        background: white;
-        color: black;
-        font-weight: normal;
-        border: 1px solid black;
-      }
-
-
-
-      .text:hover + .fukidashi {
-        display: block;
-      }
-
-      .fukidashi::before{
-        content: "内容：";
-        font-weight: bold;
-      }
-
-    }
 
  }
