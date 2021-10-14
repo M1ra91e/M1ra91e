@@ -105,7 +105,7 @@ body{
 /* CSS for CodePen */
 .accordion-container {
   position: relative;
-  width: 90%;
+  width: 80%;
   margin: 1.875em auto;
 
 }
@@ -125,7 +125,7 @@ body{
     display: none;
     position: absolute;
     padding: 10px;
-    font-size: 12px;
+
     line-height: 1.6em;
     color: black;
     border-radius: 5px;
@@ -168,7 +168,7 @@ body{
     display: none;
     position: absolute;
     padding: 10px;
-    
+
     line-height: 1.6em;
     color: black;
     border-radius: 5px;
