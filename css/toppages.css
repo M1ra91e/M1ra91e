@@ -5,8 +5,8 @@ p{
   background-color: white;
 }
 
-h3{
-  margin-left: 0px;
+h2{
+  margin-left: 10px;
 }
 
 a{
@@ -15,18 +15,95 @@ a{
   color: black;
 }
 
-h3 {
-  border-bottom: solid 3px black;
-  position: relative;
+body{
+  z-index: 0;
 }
 
-h3:after {
-  position: absolute;
-  content: " ";
+.accordion-container::before{
+  content: "分野別";
+  font-weight: bold;
+  font-size: 20px;
+
+}
+
+
+.accordion-container {
+  position: relative;
+  width: 100%;
+  border: 1px solid white;
+  border-top: none;
+  outline: 0;
+  cursor: pointer
+
+}
+
+.accordion-container .accordion-title {
   display: block;
-  border-bottom: solid 3px #ffc778;
-  bottom: -3px;
-  width: 20%;
+  position: relative;
+  margin: 0;
+  padding: 0.625em 0.625em 0.625em 2em;
+  font-size: 1.25em;
+  font-weight: normal;
+  color: black;
+  background: white;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+
+.accordion-container .accordion-title:hover,
+.accordion-container .accordion-title:active,
+.accordion-container .content-entry.open .accordion-title {
+  background-color: white;
+  color: black;
+
+}
+
+.accordion-container .accordion-title:hover i:before,
+.accordion-container .accordion-title:hover i:active,
+.accordion-container .content-entry.open i {
+  color: white;
+}
+
+.accordion-title{
+  position: relative;
+
+}
+
+.accordion-title:after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 38%;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: solid 2px black;
+  border-right: solid 2px ;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+
+}
+
+.accordion-title.open:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 45%;
+}
+
+.accordion-content {
+  position: relative;
+  display: none;
+  padding-left: 2.3125em;
+
+}
+
+/* CSS for CodePen */
+.accordion-container {
+  position: relative;
+  width: 80%;
+  margin: 1.875em auto;
+
 }
 
 @media screen and (max-width:480px) {
@@ -46,7 +123,7 @@ h3:after {
   height: 300px;               /* 横幅を200pxに指定 */
   border: 2px solid #000;      /* わかりやすくボーダーを引く */
   overflow-y: scroll;          /* 縦方向にスクロール可能にする */
-  
+
 }
 
 .new{
