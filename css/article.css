@@ -179,7 +179,7 @@ h3{
 }
 
 p.long{
-  
+
   overflow-wrap: break-word;
 }
 
@@ -306,4 +306,85 @@ overflow-x: auto;
 
 a{
   margin-left: 10px
+}
+
+
+
+.accordion-container {
+  position: relative;
+  width: 100%;
+  border: 1px solid white;
+  border-top: none;
+  outline: 0;
+  cursor: pointer
+
+}
+
+.accordion-container .accordion-title {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0.625em 0.625em 0.625em 2em;
+  font-size: 1.25em;
+  font-weight: normal;
+  color: black;
+  background: white;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+
+.accordion-container .accordion-title:hover,
+.accordion-container .accordion-title:active,
+.accordion-container .content-entry.open .accordion-title {
+  background-color: white;
+  color: black;
+
+}
+
+.accordion-container .accordion-title:hover i:before,
+.accordion-container .accordion-title:hover i:active,
+.accordion-container .content-entry.open i {
+  color: white;
+}
+
+.accordion-title{
+  position: relative;
+
+}
+
+.accordion-title:after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 38%;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: solid 2px black;
+  border-right: solid 2px ;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+
+}
+
+.accordion-title.open:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 45%;
+}
+
+.accordion-content {
+  position: relative;
+  display: none;
+  padding-left: 2.3125em;
+
+}
+
+/* CSS for CodePen */
+.accordion-container {
+  position: relative;
+  width: 90%;
+  margin: 1.875em auto;
+
 }
