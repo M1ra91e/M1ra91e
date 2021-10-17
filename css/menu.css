@@ -170,98 +170,179 @@ body{
 
 
 
-.accordion-container2 {
-  position: relative;
-  width: 20%;
-
-  border-top: none;
-  outline: 0;
-  cursor: pointer
-
-}
-
-.accordion-container2 .accordion-title2 {
-  display: block;
-  position: relative;
-  margin: 0;
-  padding: 0px 0 0px 0;
-
-  font-weight: normal;
-  color: gray;
-  background: white;
-  cursor: pointer;
-
-}
-
-.accordion-container2 .accordion-title2:hover,
-.accordion-container2 .accordion-title2:active,
-.accordion-container2 .content-entry.open .accordion-title2 {
-  background-color: white;
-  color: gray;
-
-}
-
-.accordion-container2 .accordion-title2:hover i:before,
-.accordion-container2 .accordion-title2:hover i:active,
-.accordion-container2 .content-entry.open i {
-  color: white;
-}
-
-.accordion-title2{
-  position: relative;
-  font-size: 12px;
-}
-
-.accordion-title2:after {
-  content: "";
-  position: absolute;
-  right: 25px;
-  top: 33%;
-  transition: all 0.2s ease-in-out;
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-top: solid 1px gray;
-  border-right: solid 1px gray;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-
-}
-
-.accordion-title2.open:after {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  top: 45%;
-}
-
-.accordion-content2 {
-  position: relative;
-  display: none;
-  padding: 4px;
-  color: gray;
-  font-size: 12px;
-  width: 500%;
-}
-
-/* CSS for CodePen */
-.accordion-container2 {
-  position: relative;
-  width: 20%;
-  margin: 0;
-
-}
-
-.midasi{
-  margin: 30px 0px 2px 0px
-}
-
 
 @media screen and (min-width:480px) {
+  .accordion-container2 {
+    position: relative;
+    width: 20%;
 
+    border-top: none;
+    outline: 0;
+    cursor: pointer
+
+  }
+
+  .accordion-container2 .accordion-title2 {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0px 0 0px 0;
+
+    font-weight: normal;
+    color: gray;
+    background: white;
+    cursor: pointer;
+
+  }
+
+  .accordion-container2 .accordion-title2:hover,
+  .accordion-container2 .accordion-title2:active,
+  .accordion-container2 .content-entry.open .accordion-title2 {
+    background-color: white;
+    color: gray;
+
+  }
+
+  .accordion-container2 .accordion-title2:hover i:before,
+  .accordion-container2 .accordion-title2:hover i:active,
+  .accordion-container2 .content-entry.open i {
+    color: white;
+  }
+
+  .accordion-title2{
+    position: relative;
+    font-size: 12px;
+  }
+
+  .accordion-title2:after {
+    content: "";
+    position: absolute;
+    right: 25px;
+    top: 33%;
+    transition: all 0.2s ease-in-out;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-top: solid 1px gray;
+    border-right: solid 1px gray;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+
+  }
+
+  .accordion-title2.open:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 45%;
+  }
+
+  .accordion-content2 {
+    position: relative;
+    display: none;
+    padding: 4px;
+    color: gray;
+    font-size: 12px;
+    width: 500%;
+  }
+
+  /* CSS for CodePen */
+  .accordion-container2 {
+    position: relative;
+    width: 20%;
+    margin: 0;
+
+  }
+
+  .midasi{
+    margin: 30px 0px 2px 0px
+  }
 }
 
  @media screen and (max-width:480px) {
 
+   .accordion-container2 {
+     position: relative;
+     width: 20%;
 
+     border-top: none;
+     outline: 0;
+     cursor: pointer
+
+   }
+
+   .accordion-container2 .accordion-title2 {
+     display: block;
+     position: relative;
+     margin: 0;
+     padding: 0px 0 0px 0;
+
+     font-weight: normal;
+     color: gray;
+     background: white;
+     cursor: pointer;
+
+   }
+
+   .accordion-container2 .accordion-title2:hover,
+   .accordion-container2 .accordion-title2:active,
+   .accordion-container2 .content-entry.open .accordion-title2 {
+     background-color: white;
+     color: gray;
+
+   }
+
+   .accordion-container2 .accordion-title2:hover i:before,
+   .accordion-container2 .accordion-title2:hover i:active,
+   .accordion-container2 .content-entry.open i {
+     color: white;
+   }
+
+   .accordion-title2{
+     position: relative;
+     font-size: 12px;
+   }
+
+   .accordion-title2:after {
+     content: "";
+     position: absolute;
+     right: 25px;
+     top: 33%;
+     transition: all 0.2s ease-in-out;
+     display: block;
+     width: 6px;
+     height: 6px;
+     border-top: solid 1px gray;
+     border-right: solid 1px gray;
+     -webkit-transform: rotate(135deg);
+     transform: rotate(135deg);
+
+   }
+
+   .accordion-title2.open:after {
+     -webkit-transform: rotate(-45deg);
+     transform: rotate(-45deg);
+     top: 45%;
+   }
+
+   .accordion-content2 {
+     position: relative;
+     display: none;
+     padding: 4px;
+     color: gray;
+     font-size: 12px;
+     width: 250%;
+   }
+
+   /* CSS for CodePen */
+   .accordion-container2 {
+     position: relative;
+     width: 40%;
+     margin: 0;
+
+   }
+
+   .midasi{
+     margin: 30px 0px 2px 0px
+   }
 
  }
