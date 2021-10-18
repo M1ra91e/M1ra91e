@@ -12,7 +12,7 @@ h2{
 a{
   margin-left: 10px;
   text-decoration: none;
-  color: black;
+  color: royalblue;
 }
 
 body{
@@ -101,7 +101,7 @@ body{
 /* CSS for CodePen */
 .accordion-container {
   position: relative;
-  width: 80%;
+  width: 90%;
   margin: 1.875em auto;
 
 }
