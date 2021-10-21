@@ -71,7 +71,7 @@ x_{n}=r\sin\theta_{1}\sin\theta_{2}\cdots\sin\theta_{n-2}\sin\theta_{n-1}\\
 <p>極座標も$n$次元というだけあって、なかなか複雑に見えますが、<br>
   よく観察すると簡単な考え方(実は帰納法)にそって、作られているのがわかります。</p>
 <p>構成の流れを簡単に説明します。
-n変数を同時に変換するのは大変なので、まずは$\,x_{n-1}\,$と$\,x_{n}\,$だけを2次元の極座標変換を施します。<br>
+n変数を同時に変換するのは大変なので、まずは$\,x_{n-1}\,$と$\,x_{n}\,$だけに2次元の極座標変換を施します。<br>
 $$\left\{ \begin{array}{l}
 x_{n-1}=r_{n-1}\cos \theta_{n-1}\\
 x_{n　}=r_{n-1}\sin \theta_{n-1}\\
@@ -113,7 +113,7 @@ $$\left\{ \begin{array}{l}
 x_{j-1}=r_{j-1}\cos \theta_{j-1}\\
 r_{j　}=r_{j-1}\sin \theta_{j-1}\\
 \end{array} \right. $$
-そして最後に、$r_{1}=r$とすれば完成です。</p>
+そして最後に、$r_{1}=r$とすればn次元の極座標変換になっています。</p>
 <p>
 念のため最終結果を書いておくと、
 <div class="horizontal-scroll">
@@ -126,10 +126,10 @@ x_{n-1}=r\sin\theta_{1}\sin\theta_{2}\cdots\sin\theta_{n-2}\cos\theta_{n-1}\\
 x_{n}=r\sin\theta_{1}\sin\theta_{2}\cdots\sin\theta_{n-2}\sin\theta_{n-1}\\
 \end{array} \right. $$</div>
 となります。</div>
-<p>n次元の極座標変換は、2次元の極座標変換の繰り返しで構成されていることがわかりました。<br>
+<p>n次元の極座標変換は、2次元の極座標変換の繰り返しで構成されていることがわかります。<br>
   ラプラシアンの極座標表示でも、この帰納法の構造を念頭に証明を考えればうまく計算ができます。</p>
 <div class="ublank40"></div>
-<h3>計算</h3>
+<h3>定理の証明</h3>
 <p>$\displaystyle A^{(k)}=
 \frac{\partial ^2}{\partial x_{1}^2}+
 \frac{\partial ^2}{\partial x_{2}^2}+
