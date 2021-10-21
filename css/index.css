@@ -50,6 +50,8 @@ h3:after {
 }
 
 .box {
+  position:relative;
+  left: -0%;
   width: 100%;                /* 横幅を200pxに指定 */
   height: 300px;               /* 横幅を200pxに指定 */
   border: 2px solid #000;      /* わかりやすくボーダーを引く */
