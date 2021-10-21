@@ -27,7 +27,193 @@
 
 <body>
 <h2>n次元ラプラシアンの極座標表示</h2>
+
+<div class="bblank40">
+n次元ラプラシアンの極座標表示を計算します。</div>
+
+
+<p>今回の定理は以下です。</p>
+<div class="theorem">
 <p>
+$n$次元ラプラシアン
+$\displaystyle\Delta=
+\frac{\partial ^2}{\partial x_{1}^2}+
+\frac{\partial ^2}{\partial x_{2}^2}+
+\cdots+
+\frac{\partial ^2}{\partial x_{n}^2}$
+を極座標表示
+<div class="horizontal-scroll">
+$$\left\{ \begin{array}{l}
+x_{1}=r\cos\theta _{1}\\
+x_{2}=r\sin\theta_{1}\cos\theta_{2}\\
+x_{3}=r\sin \theta_{1}\sin\theta_{2}\cos\theta_{3}\\
+　\vdots\\
+x_{n-1}=r\sin\theta_{1}\sin\theta_{2}\cdots\sin\theta_{n-2}\cos\theta_{n-1}\\
+x_{n}=r\sin\theta_{1}\sin\theta_{2}\cdots\sin\theta_{n-2}\sin\theta_{n-1}\\
+\end{array} \right. $$
+($r > 0,$　$0 < \theta_{1},\theta_{2},\dots ,\theta_{n-2} < \pi,$　$–\pi\leqq\theta_{n-1}<\pi$)
+</p>
+</div>
+<p>のもとで表示すると、
+  <div class="horizontal-scroll">
+  $$\Delta =\displaystyle
+  \frac{\partial^2}{\partial r^2}+
+  \frac{n-1}{r}\frac{\partial}{\partial r}+
+  \sum_{j=1}^{n-1}\frac{1}{(r\sin\theta_{1}\dots\sin\theta_{j-1})^2}\left(
+  \frac{\partial^2}{\partial \theta_{j}^2}+\frac{n-1-j}{\tan\theta_{j}}\frac{\partial}{\partial \theta_{j}}\right)
+  $$</div>
+  となる。
+</div>
+
+
+
+<h3>極座標について</h3>
+<p>極座標も$n$次元というだけあって、なかなか複雑に見えますが、<br>
+  よく観察すると簡単な考え方(実は帰納法)にそって、作られているのがわかります。</p>
+<p>構成の流れを簡単に説明します。
+n変数を同時に変換するのは大変なので、まずは$\,x_{n-1}\,$と$\,x_{n}\,$だけを2次元の極座標変換を施します。<br>
+$$\left\{ \begin{array}{l}
+x_{n-1}=r_{n-1}\cos \theta_{n-1}\\
+x_{n　}=r_{n-1}\sin \theta_{n-1}\\
+\end{array} \right. $$
+すると、全体としては以下のように変換されます。
+$$\left\{ \begin{array}{l}
+x_{1}=x_{1}\\
+x_{2}= x_{2}\\
+x_{3}= x_{3}\\
+　\vdots\\
+x_{n-3}= x_{n-3}\\
+x_{n-2}= x_{n-2}\\
+x_{n-1}=r_{n-1}\cos\theta_{n-1}\\
+x_{n}=r_{n-1}\sin\theta_{n-1}\\
+\end{array} \right. $$
+</p>
+<div class="ublank40">
+次に$x_{n-2}$と$\,r_{n-1}\,$に2次元の極座標変換を施します。
+$$\left\{ \begin{array}{l}
+x_{n-2}=r_{n-2}\cos \theta_{n-2}\\
+r_{n-1}=r_{n-2}\sin \theta_{n-2}\\
+\end{array} \right. $$
+すると、全体としては以下のように変換されます。
+$$\left\{ \begin{array}{l}
+x_{1}=x_{1}\\
+x_{2}= x_{2}\\
+x_{3}= x_{3}\\
+　\vdots\\
+x_{n-3}= x_{n-3}\\
+x_{n-2}= r_{n-2}\cos\theta_{n-2}\\
+x_{n-1}=r_{n-2}\sin\theta_{n-2}\cos\theta_{n-1}\\
+x_{n　}=r_{n-2}\sin\theta_{n-2}\sin\theta_{n-1}\\
+\end{array} \right. $$
+</div>
+<div class="ublank40">
+これと同様の操作を繰り返していきます。つまり、
+次に$x_{j-1}$と$\,r_{j}\,$　($j=n-1,n-2,\dots,1)$　に以下のように、2次元の極座標変換を施すことを繰り返します。
+$$\left\{ \begin{array}{l}
+x_{j-1}=r_{j-1}\cos \theta_{j-1}\\
+r_{j　}=r_{j-1}\sin \theta_{j-1}\\
+\end{array} \right. $$
+そして最後に、$r_{1}=r$とすれば完成です。</p>
+<p>
+念のため最終結果を書いておくと、
+<div class="horizontal-scroll">
+$$\left\{ \begin{array}{l}
+x_{1}=r\cos\theta _{1}\\
+x_{2}=r\sin\theta_{1}\cos\theta_{2}\\
+x_{3}=r\sin \theta_{1}\sin\theta_{2}\cos\theta_{3}\\
+　\vdots\\
+x_{n-1}=r\sin\theta_{1}\sin\theta_{2}\cdots\sin\theta_{n-2}\cos\theta_{n-1}\\
+x_{n}=r\sin\theta_{1}\sin\theta_{2}\cdots\sin\theta_{n-2}\sin\theta_{n-1}\\
+\end{array} \right. $$</div>
+となります。</div>
+<p>n次元の極座標変換は、2次元の極座標変換の繰り返しで構成されていることがわかりました。<br>
+  ラプラシアンの極座標表示でも、この帰納法の構造を念頭に証明を考えればうまく計算ができます。</p>
+<div class="ublank40"></div>
+<h3>計算</h3>
+<p>$\displaystyle A^{(k)}=
+\frac{\partial ^2}{\partial x_{1}^2}+
+\frac{\partial ^2}{\partial x_{2}^2}+
+\cdots+
+\frac{\partial ^2}{\partial x_{k}^2}$<br>
+<div class="horizontal-scroll">
+$\displaystyle B^{(k)}=
+\frac{1}{r_{k+1}^2}\frac{\partial ^2}{\partial \theta_{k+1}^2}+
+\frac{1}{r_{k+2}^2}\frac{\partial ^2}{\partial \theta_{k+2}^2}+
+\cdots+
+\frac{1}{r_{n-1}^2}\frac{\partial ^2}{\partial \theta_{n-1}^2}$</div><br>
+とする。<br>
+(ここで、$r_{k}=r\sin\theta_{1}\dots\sin\theta_{k-1} $ である。)
+</p>
+
+<div class="ublank20">
+<p>
+$\displaystyle A^{(k)}-A^{(k-1)}+\frac{\partial^2}{\partial r_{k+1}^2}$<br>
+$=\displaystyle \frac{\partial^2}{\partial x_{k}^2}+\frac{\partial^2}{\partial r_{k+1}^2}$<br>
+$=\displaystyle \frac{\partial^2}{\partial r_{k}^2}+\frac{1}{r_{k}}\frac{\partial}{\partial r_{k}}+\frac{1}{r_{k}^2}
+\frac{\partial^2}{\partial \theta_{k}^2}$<br>
+$=\displaystyle \frac{\partial^2}{\partial r_{k}^2}+\frac{1}{r_{k}}\frac{\partial}{\partial r_{k}}
+-(B^{(k)}-B^{(k-1)})$<br>
+より、</p>
+</div>
+
+<p>
+<div class="horizontal-scroll">
+$\left(\displaystyle A^{(k)}+\frac{\partial^2}{\partial r_{k+1}^2}+B^{(k)}\right)=
+\displaystyle \left(A^{(k-1)}+\frac{\partial^2}{\partial r_{k}^2}+B^{(k-1)}\right)+
+\frac{1}{r_{k}}\frac{\partial}{\partial r_{k}}$
+を得る。
+</div>
+</p>
+<p>
+したがって、<br>
+$\Delta$<br>
+$ = \displaystyle A^{(n)}$<br>
+$\displaystyle=A^{(n-1)}+\frac{\partial^2}{\partial r_{n}^2}+B^{(n-1)}$<br>
+$\displaystyle=A^{(0)}+\frac{\partial^2}{\partial r_{1}^2}+B^{(0)}+\sum_{j=1}^{n-1}
+\frac{1}{r_{k}}\frac{\partial}{\partial r_{k}}$<br>
+<div class="horizontal-scroll">
+$\displaystyle=\frac{\partial^2}{\partial r^2}+
+\sum_{j=1}^{n-1}\frac{1}{(r\sin\theta_{1}\dots\sin\theta_{j-1})^2}
+\frac{\partial^2}{\partial \theta_{j}^2}+\sum_{j=1}^{n-1}\frac{1}{r_{j}}\frac{\partial}{\partial r_{j}}$
+</div>
+</p>
+<p>
+  これによりあとは、$\displaystyle\sum_{j=1}^{n-1}\frac{1}{r_{j}}\frac{\partial}{\partial r_{j}}$を計算すればよい。<br>
+  $\left\{ \begin{array}{l}
+  x_{k-1}=r_{k-1}\cos \theta_{k-1}\\
+  r_{k　}=r_{k-1}\sin \theta_{k-1}\\
+  \end{array} \right. $　　から、</p>
+  <p>
+  $\displaystyle\frac{\partial}{\partial r_{k}}=
+  \sin\theta_{k-1}\frac{\partial}{\partial r_{k-1}}
+  +\frac{\cos\theta_{k-1}}{r_{k-1}}\frac{\partial}{\partial \theta_{k-1}}$　　より、<br>
+<div class="horizontal-scroll">
+  $\displaystyle\frac{1}{r_{k}}\frac{\partial}{\partial r_{k}}=
+  \frac{1}{r_{k-1}}\frac{\partial}{\partial r_{k-1}}
+  +\frac{1}{r_{k-1}^2 \tan\theta_{k-1}}\frac{\partial}{\partial \theta_{k-1}}$　　が成り立つので、</div></p>
+<p>
+  $\displaystyle\sum_{j=1}^{n-1}\frac{1}{r_{j}}\frac{\partial}{\partial r_{j}}$<br>
+  $=\displaystyle\sum_{j=1}^{n-1}\left(\frac{1}{r}\frac{\partial}{\partial r}+\sum_{i=1}^{j-1}
+  \frac{1}{r_{i}^2 \tan\theta_{i}}\frac{\partial}{\partial \theta_{i}}\right)$<br>
+  $=\displaystyle\frac{n-1}{r}\frac{\partial}{\partial r}
+  +\sum_{1\leqq i < j \leqq n-1 }\frac{1}{r_{i}^2\tan\theta_{i}} \frac{\partial}{\partial \theta_{i}}$<br>
+  $=\displaystyle\frac{n-1}{r}\frac{\partial}{\partial r}
+  +\sum_{i=1}^{n-1}\frac{n-1-i}{r_{i}^2\tan\theta_{i}} \frac{\partial}{\partial \theta_{i}}$<br>
+</p>
+<p>以上の結果を合わせて、<br>
+  <div class="horizontal-scroll">
+  $$\Delta =\displaystyle
+  \frac{\partial^2}{\partial r^2}+
+  \frac{n-1}{r}\frac{\partial}{\partial r}+
+  \sum_{j=1}^{n-1}\frac{1}{(r\sin\theta_{1}\dots\sin\theta_{j-1})^2}\left(
+  \frac{\partial^2}{\partial \theta_{j}^2}+\frac{n-1-j}{\tan\theta_{j}}\frac{\partial}{\partial \theta_{j}}\right)
+  $$
+</div>
+</p>
+
+<p>(計算終わり)</p>
+
+
 
 
 
