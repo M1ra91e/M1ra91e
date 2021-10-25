@@ -247,15 +247,15 @@ overflow-x: auto;
 }
 
 .bblank40{
-  margin: 0px 0px 40px 10px;
+  margin: 0px 0px 40px 0px;
 
 }
 .bblank20{
-  margin-bottom: 0px 0px 20px 10px;
+  margin: 0px 0px 20px 0px;
 }
 
 .bblank10{
-  margin-bottom: 0px 0px 10px 10px;
+  margin: 0px 0px 10px 10px;
 }
 
 .bold{
