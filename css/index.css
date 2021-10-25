@@ -25,6 +25,12 @@ h3:after {
   width: 20%;
 }
 
+a:hover{
+  color: royalblue;
+  text-decoration: underline;
+
+}
+
 @media screen and (max-width:480px) {
 
   a{
