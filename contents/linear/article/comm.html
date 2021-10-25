@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../../css/article.css">
+  <link rel="stylesheet" href="../../../css/header.css">
+  <title>２つの行列が可換になる条件(表現論的視点から)　-数学処らぷらし庵-</title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
+  </script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+</head>
+
+<header>
+<h1>数学処 らぷらし庵</h1>
+<nav class="pc-nav">
+  <ul>
+    <li><a href="../../../index.html">トップページ</a>
+    <li><a href="../../../article.html">記事</a>
+    <li><a href="../../../ex.html">演習問題</a>
+    <li><a href="../../../link.html">リンク</a>
+  </ul>
+</nav>
+</header>
+
+<body>
+  <h2>2つの複素行列が可換になる条件(表現論的視点から)</h2>
+  <div class="bblank40">2つの複素行列が可換になるための条件を、表現論の言葉を用いて記述します。<br>
+    初等的視点から述べた記事についても執筆中です。<br>
+  また将来的には、一般の体に対しても考えてみたいと考えています。</div>
+
+<h3>$\mathbb{C}[t]$の表現</h3>
+<p>この記事においてJordan標準形の理論は既知とします。</p>
+<p>ジョルダン行列$\,J(n,\lambda)\,$を、</p>
+<div class="horizontal-scroll">
+  $J(n,\lambda)=\begin{pmatrix}
+  \lambda & 1 & 0 & \cdots & 0 & 0\\
+  0 & \lambda & 1 & \cdots & 0 & 0\\
+  0 & 0 & \lambda & \cdots & 0 & 0\\
+  \vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+  0 & 0 & 0 & \cdots & \lambda & 1\\
+  0 & 0 & 0 & \cdots & 0 & \lambda\\
+  \end{pmatrix}
+\in M(n,\mathbb{C})$
+</div>
+<p>と定める。</p>
+<p>また、多項式環$\,\mathbb{C}[t]$-加群$\,V(n,\lambda)\,$を、$\,\mathbb{C}^{n}\,$に、
+  環の作用$\,t.v=J(n,\lambda)v　(v\in \mathbb{C}^{n})\,$
+  を定めたものとする。</p>
+
+<p>さて、$\mathbb{C}[t]$の表現については以下が成り立ちます。</p>
+<div class="theorem">
+<p>$\mathbb{C}[t]$の(有限次元)直既約表現の同型類は、$\,V(n,\lambda)\,$ですべてである。
+  (また、これらのいずれも互いに同型でない。)</p>
+<p>さらに$V(n,\lambda)$の部分表現は、線形空間としては$\,\mathbb{C}^{r}\times 0^{n-r}\,$
+  という形をしたものに限り、それらは$\,V(r,\lambda)\,$と同型。<br>
+  したがって、$0\subset V(1,\lambda) \subset\cdots \subset V(n, \lambda)$とみなせる。
+</p>
+</div>
+
+<div class="blank40">表現論的な考え方に馴染みがあれば、それほど難しくはなく示せると思うのでぜひやってみてください。
+当サイトの次のページに解答例があります。
+<a href="../../../ex/grprep/article/ct.html">→$\mathbb{C}[t]$の表現論 -数学処らぷらし庵-</a>
+</div>
+
+<h3>表現論的に問題を見る</h3>
+<p>考えたい問題を表現論の言葉で書き換えます。</p>
+<p>$\,A\,$を$\,n$次の正方行列とし、$\,\mathbb{C}^{n}\,$に$\,t.v=Av\,$という作用を考えた表現を、$V_{A}$と書く。
+  　(先の節の定義と合わせると、$\,V_{J(n,\lambda)}=V(n, \lambda)$である。)
+</p>
+
+<div class="ublank40">さて、以下の事実に注目してみます。</div>
+<div class="theorem">
+<p>$\,A, B\in M(n,\mathbb{C})$とする。このとき以下は同値である。</p>
+<ol>
+  <li>$AB=BA$</li>
+  <li>$B$は、表現$\,V_{A}\,$の準同型である。</li>
+  <li>$A$は、表現$\,V_{B}\,$の準同型である。</li>
+</ol>
+<p>
+  特に、<div class="horizontal-scroll">$\,\{B\in M(n,\mathbb{C})\, ; \,AB-BA=0\}=\mathrm{End}_{\mathbb{C}[t]}(V_{A})$</div>
+  が成り立つ。
+
+</div>
+<p>上の定理は当たり前のことを述べただけですが、このように発想の転換を行うとやるべきことが見えてきます。</p>
+
+<div class="ublank40">問題をもっと細かく分解してみましょう。<br>
+"成分分解"を行います。</div>
+<div class="theorem">
+<p>
+  $V=V(n_{1},\lambda_{1})\oplus\cdots\oplus V(n_{k},\lambda_{m})\,$とする。</p>
+<p>自然な埋め込み$\,\iota_{j}\,:\,V(n_{j},\lambda_{j})\rightarrow V\, $　と、<br>
+  自然な射影　　$p_{k}\,:\,V\rightarrow V(n_{k},\lambda_{k})$　は、<br>
+  $\mathbb{C}[t]$-表現の射であり、
+</p>
+<div class="bblank0">
+<div class="horizontal-scroll">$\,D\,:\,\displaystyle\mathrm{End}_{\mathbb{C}[t]}(V)
+  \rightarrow \bigoplus_{j,k=1}^{m}\mathrm{Hom}_{\mathbb{C}[t]}(\,V(n_{j},\lambda_{j})\,,\,V(n_{k},\lambda_{k})\,)$
+</div>
+</div>
+
+<div class="bblank20">
+<div class="horizontal-scroll">
+$D(F)=(p_{k}\circ f\circ \iota_{j})_{j,k}$
+</div>
+</div>
+
+<div class="bblank0">
+<div class="horizontal-scroll">$\,I\,:\,\displaystyle
+  \bigoplus_{j,k=1}^{m}\mathrm{Hom}_{\mathbb{C}[t]}(\,V(n_{j},\lambda_{j})\,,\,V(n_{k},\lambda_{k})\,)\rightarrow\mathrm{End}_{\mathbb{C}[t]}(V)$
+</div>
+</div>
+
+<div class="bblank40">
+<div class="horizontal-scroll">
+$\displaystyle I((f_{jk})_{j,k})=\sum_{j,k=1}^{m} \iota_{k}\circ f_{jk}\circ p_{j}$
+</div>
+</div>
+
+<p>という対応で、<br>
+  <div class="horizontal-scroll">
+  $\,\displaystyle\mathrm{End}_{\mathbb{C}[t]}(V)
+    \cong \bigoplus_{j,k=1}^{m}\mathrm{Hom}_{\mathbb{C}[t]}(\,V(n_{j},\lambda_{j})\,,\,V(n_{k},\lambda_{k})\,)$
+</div>
+</div>
+
+<p>見た目はいかついですが、これは単にブロック分割ができることを主張しているだけで、
+  やはり当たり前のことを述べています。</p>
+<div class="bblank40">しかし、このように整理すると、問題は$\displaystyle\mathrm{Hom}_{\mathbb{C}[t]}(\,V(m,\lambda)\,,\,V(n,\mu)\,)$
+  を調べることに帰着されるということがわかりました。</div>
+
+<h3>$\displaystyle\mathrm{Hom}_{\mathbb{C}[t]}(\,V(m,\lambda)\,,\,V(n,\mu)\,)\,$を計算する</h3>
+
+<p>
+$\displaystyle\mathrm{Hom}_{\mathbb{C}[t]}(\,V(m,\lambda)\,,\,V(n,\mu)\,)\,$を計算していきましょう。</p>
+
+  <div class="ublank40">すぐに使うので、<br>
+    $m>n$のとき、$V(m,\lambda)/V(n,\lambda)\cong V(m-n,\lambda)$という事実を確認してみてくだい。(行列表示してみればすぐにわかります。)</div>
+
+<p>さて簡単な場合から計算してみましょう。以下が成り立ちます。</p>
+<div class="theorem">
+<p>
+$\lambda ≠ \mu$のとき、$\displaystyle\mathrm{Hom}_{\mathbb{C}[t]}(\,V(m,\lambda)\,,\,V(n,\mu)\,)\,=0$
+</p>
+</div>
+<div class="proof">
+<p>$0$でない射の存在を仮定すると準同型定理により、ある$k$が存在して、$V(k,\lambda)\cong V(k,\mu)$となってしまう。
+</p>
+</div>
+<div class="ublank40">次に、$\lambda =\mu\,$の場合を考えます。</div>
+<p>$V(n,\lambda)=\mathbb{C}^{n}$の標準基底を$\,e_{1},\dots ,e_{n}\,$としましょう。</p>
+<p>$(t-\lambda)^{n-k}.e_{n}=e_{k}\,$<br>
+  $(t-\lambda)^{n}.e_{n}=0\,$
+  が成り立ちます。</p>
+
+<div class="theorem">
+  <p>$\,\mathrm{Hom}_{\mathbb{C}[t]}(V(m,\lambda)\,,V(n,\lambda))\,$の元を標準基底のもと行列表示すると、</p>
+$m \geqq n$のとき、
+<div class="horizontal-scroll">
+
+  $\mathrm{Hom}_{\mathbb{C}[t]}(V(m,\lambda),V(n,\lambda))
+  =\left\{\begin{pmatrix}
+  0 & \cdots & 0 & a_{n} & a_{n-1} & a_{n-2} & \cdots & a_{3} & a_{2} & a_{1}\\
+  0 & \cdots & 0 & 0 & a_{n} & a_{n-1} & \cdots & a_{4} & a_{3} & a_{2}\\
+  0 & \cdots & 0 & 0 & 0 & a_{n} & \cdots & a_{5} & a_{4} & a_{3}\\
+  \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+  0 & \cdots & 0 & 0 & 0 & 0 & \cdots & a_{n} & a_{n-1} & a_{n-2}\\
+  0 & \cdots & 0 & 0 & 0 & 0 & \cdots & 0 & a_{n} & a_{n-1}\\
+  0 & \cdots & 0 & 0 & 0 & 0 & \cdots & 0 & 0 & a_{n}\\
+  \end{pmatrix}
+  \in M(n,m,\mathbb{C})\right\}$
+</div>
+$m \leqq n$のとき、
+<div class="horizontal-scroll">
+
+  $\mathrm{Hom}_{\mathbb{C}[t]}(V(m,\lambda),V(n,\lambda))
+  =\left\{\begin{pmatrix}
+   a_{m} & a_{m-1} & a_{m-2} & \cdots & a_{3} & a_{2} & a_{1}\\
+   0 & a_{m} & a_{m-1} & \cdots & a_{4} & a_{3} & a_{2}\\
+   0 & 0 & a_{m} & \cdots & a_{5} & a_{4} & a_{3}\\
+   \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+   0 & 0 & 0 & \cdots & a_{m} & a_{m-1} & a_{m-2}\\
+   0 & 0 & 0 & \cdots & 0 & a_{m} & a_{m-1}\\
+   0 & 0 & 0 & \cdots & 0 & 0 & a_{m}\\
+   0 & 0 & 0 & \cdots & 0 & 0 & 0\\
+   \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+   0 & 0 & 0 & \cdots & 0 & 0 & 0\\
+
+  \end{pmatrix}
+  \in M(n,m,\mathbb{C})\right\}$
+</p>
+</div>
+となる。
+</div>
+<div class="proof">
+  <p>
+    $V(m, \lambda),\,V(n,\lambda)$の標準基底を各々$e_{1},\dots e_{m}$、$f_{1},\dots ,f_{n}$とし、
+    $\,F\in\mathrm{Hom}_{\mathbb{C}[t]}(V(m,\lambda)\,,V(n,\lambda))\,$とする。
+  </p>
+  <div class="ublank40">$m\geqq n$のとき、$F(e_{m})=a_{1}f_{1}+\cdots +a_{n}f_{n}$とする。</div>
+<p>
+  このとき、<br>
+<div class="blank5">$F(e_{m-k})$</div>
+<div class="blank5">  $=F((t-\lambda)^{k}.e_{m})$</div>
+<div class="blank5">  $=(t-\lambda)^{k}. F(e_{m})$</div>
+<div class="blank5">  $=(t-\lambda)^{k}.(a_{1}f_{1}+\cdots+a_{n}f_{n})$</div>
+<div class="horizontal-scroll">
+<div class="blank5">  $=\left\{ \begin{array}{ll} a_{k+1}f_{1}+\dots a_{n}f_{n-k} & (0\leqq k \leqq n-1) \\ 0 & (n\leqq k \leqq m-1)\end{array} \right.$ </div>
+</div>
+となる。
+
+<div class="ublank40">$m\leqq n$のとき、$F(e_{m})=a_{1}f_{1}+\cdots +a_{n}f_{n}$とする。</div>
+<p>
+このとき、<br>
+<div class="blank5">$0=F(0)$</div>
+<div class="blank5">$=F((t-\lambda)^{m}.e_{m})$</div>
+<div class="blank5">$=a_{m+1}f_{1}+\dots a_{n}f_{n-m}$</div>
+から、$a_{m+1}=\cdots =a_{n}=0$である。
+
+<div class="ublank20">
+このとき、
+<div class="blank5">$F(e_{m-k})$</div>
+<div class="blank5">  $=F((t-\lambda)^{k}.e_{m})$</div>
+<div class="blank5">  $=(t-\lambda)^{k}. F(e_{m})$</div>
+<div class="blank5">  $=(t-\lambda)^{k}.(a_{1}f_{1}+\cdots+a_{m}f_{m})$</div>
+<div class="blank5">  $=a_{k+1}f_{1}+\dots a_{m}f_{m-k} $ </div>
+</div>
+となる。</p>
+</div>
+
+<p>以上により、$\displaystyle\mathrm{Hom}_{\mathbb{C}[t]}(\,V(m,\lambda)\,,\,V(n,\mu)\,)\,$が完全に計算できました。
+
+<h3>まとめ</h3>
+<p>今まで考えてきたすべてのステップを逆にたどることで、ある行列と可換な行列が全て求まります。</p>
+
+定理としてまとめると、
+<div class="theorem">
+  <p>
+    <div class="horizontal-scroll">
+    $A\in M(n,\mathbb{C})$が正則行列$\,P\,$により、$\displaystyle PAP^{-1}=\bigoplus_{l=1}^{b}\left(\bigoplus_{k=1}^{a_{l}}J(n_{k}^{(l)},\lambda_{l})\right)　
+    (n_{1}^{(l)}\leqq n_{2}^{(l)}\leqq \cdots \leqq n_{k}^{(l)})$</div>
+    とJordan標準化されるとき、<br>
+    $\,A\,$と可換な行列$\,B\,$は以下のように書けるもの全体である。</p>
+    <div class="blank5">$B=P(F_{\lambda_{1}}\oplus \cdots \oplus F_{\lambda_{b}})P^{-1}$</div>
+    <div class="blank5">ここで、$F_{\lambda_{l}}=(G_{pq})_{p,q=1}^{a_{l}}$</div>
+    $p \geqq q$のとき、
+    <div class="horizontal-scroll">
+
+      $G_{pq}=
+      \begin{pmatrix}
+      0 & \cdots & 0 & a_{n_{q}^{(l)}} & a_{n_{q}^{(l)}-1} & a_{n_{q}^{(l)}-2} & \cdots & a_{3} & a_{2} & a_{1}\\
+      0 & \cdots & 0 & 0 & a_{n_{q}^{(l)}} & a_{n_{q}^{(l)}-1} & \cdots & a_{4} & a_{3} & a_{2}\\
+      0 & \cdots & 0 & 0 & 0 & a_{n_{q}^{(l)}} & \cdots & a_{5} & a_{4} & a_{3}\\
+      \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+      0 & \cdots & 0 & 0 & 0 & 0 & \cdots & a_{n_{q}^{(l)}} & a_{n_{q}^{(l)}-1} & a_{n_{q}^{(l)}-2}\\
+      0 & \cdots & 0 & 0 & 0 & 0 & \cdots & 0 & a_{n_{q}^{(l)}} & a_{n_{q}^{(l)}-1}\\
+      0 & \cdots & 0 & 0 & 0 & 0 & \cdots & 0 & 0 & a_{n_{q}^{(l)}}\\
+      \end{pmatrix}
+      $
+    </div>
+    <div class="ublank40">
+      $p \leqq q$のとき、
+      <div class="horizontal-scroll">
+
+        $G_{pq}=\begin{pmatrix}
+         a_{n_{p}^{(l)}} & a_{n_{p}^{(l)}-1} & a_{n_{p}^{(l)}-2} & \cdots & a_{3} & a_{2} & a_{1}\\
+         0 & a_{n_{p}^{(l)}} & a_{n_{p}^{(l)}-1} & \cdots & a_{4} & a_{3} & a_{2}\\
+         0 & 0 & a_{n_{p}^{(l)}} & \cdots & a_{5} & a_{4} & a_{3}\\
+         \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+         0 & 0 & 0 & \cdots & a_{n_{p}^{(l)}} & a_{n_{p}^{(l)}-1} & a_{n_{p}^{(l)}-2}\\
+         0 & 0 & 0 & \cdots & 0 & a_{n_{p}^{(l)}} & a_{n_{p}^{l}-1}\\
+         0 & 0 & 0 & \cdots & 0 & 0 & a_{n_{p}^{l}}\\
+         0 & 0 & 0 & \cdots & 0 & 0 & 0\\
+         \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+         0 & 0 & 0 & \cdots & 0 & 0 & 0\\
+
+        \end{pmatrix}
+        $
+  </p>
+  <p>となっている。</p>
+</div>
+</div>
+</div>
+
+<h3>コメント</h3>
+<p>ずっと疑問に思っていたことだったので解決できて嬉しかったです。</p>
+
+<p>
+<a href="../../../index.html">トップページへ</a><br>
+<a href="../list.html">線形代数学へ</a>
+</p>
+</body>
+</html>
