@@ -376,3 +376,18 @@ $\mathbb{K}=\mathbb{C}$とする。<br>
 <p>
 <a href="ex/Lebesgue/list.html">ルベーグ積分(1)<a/><br>
 </p>
+
+(※以下しばらく0でない順序環の一般論)
+<p>初めに、$\,\leqq^{\mathbb{C}}\,$は$\mathbb{Q}$上は通常の順序$\,\leqq\,$と一致することを示す。<br>
+ (O1)から、$\displaystyle \,「0\leqq \frac{p}{q}」\,\Leftrightarrow \,「0\leqq^{\mathbb{C}}\frac{p}{q}」\,$を示せばよい。</p>
+
+
+ <p>$0 <^{\mathbb{C}} 1$と順序の推移性から、$0 < n　(n\in \mathbb{N})$を得る。<br>
+   さらに、$\displaystyle\,0 <^{\mathbb{C}} \frac{1}{n}\,$である。<br>
+   実際、$\displaystyle\,0 \geqq^{\mathbb{C}} \frac{1}{n}\,$なら、(O1)から
+   $\displaystyle\,0 \leqq^{\mathbb{C}} -\frac{1}{n}\,$である。
+   (O2)で、$\displaystyle a=n,\,b=-\frac{1}{n}$として、$0\leqq^{\mathbb{C}} -1$となり、$0 <^{\mathbb{C}} 1\,$に矛盾する。
+   </p>
+ <p>以上の議論と、(O1),(O2)を合わせると、$\displaystyle \,「0\leqq \frac{p}{q}」\,\Leftrightarrow \,「0\leqq^{\mathbb{C}}\frac{p}{q}」\,$
+   がすぐにわかる。</p>
+   (※順序環の一般論部分終わり)
