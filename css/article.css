@@ -395,3 +395,9 @@ a{
   margin: 1.875em auto;
 
 }
+
+a:hover{
+  color: royalblue;
+  text-decoration: underline;
+
+}
