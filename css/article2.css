@@ -1,0 +1,579 @@
+@charset "UTF-8";
+
+
+
+
+.review{
+    padding: 0.2em 0.5em;
+    margin: 0em 0;
+    color: #474747;
+    background: whitesmoke;/*背景色*/
+
+}
+
+
+
+
+  .review::before{
+    content: "復習 ";
+    font-weight: bold;
+
+  }
+
+
+  .example::before{
+    content: "例 ";
+    font-weight: bold;
+  }
+
+  .example>*:first-child{
+    display: inline; /*div.theoremの直下は絶対インライン*/
+  }
+
+  .example>.title{
+    font-weight: bold; /*お好み装飾*/
+  }
+    .example{
+    padding: 0.2em 0.5em;
+    margin: 0em 0;
+    color: #474747;
+    background: whitesmoke;/*背景色*/
+
+}
+
+
+.proof{
+  padding: 0.2em 0.5em;
+  margin: 0em 5px;
+  border-left: solid 2px black;/*左線*/
+　margin-left: 10px
+}
+.proof::before{
+  content: "証明 ";
+  font-weight: bold;
+}
+
+
+
+.proof>.title{
+  display: inline;
+  font-weight: bold; /*お好み装飾*/
+}
+
+.proof::after{
+  content: "(証明終わり）"
+}
+
+
+
+footer{
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+}
+
+
+.question::before{
+  content: "問題";
+  font-weight: bold;
+}
+
+
+
+.question>.title{
+  font-weight: bold; /*お好み装飾*/
+  display: inline;
+}
+  .question{
+  padding: 0.2em 0.5em;
+  margin: 0em 0;
+  color: #474747;
+  background: whitesmoke;/*背景色*/
+
+}
+
+.solution{
+  padding: 0em 5px;
+  margin: 1em 1;
+
+  border-left: solid 2px black;/*左線*/
+
+}
+.solution::before{
+  content: "解答";
+  font-weight: bold;
+}
+
+.solution>*:first-child{
+  display: inline; /*div.theoremの直下は絶対インライン*/
+}
+
+.solution>.title{
+  font-weight: bold; /*お好み装飾*/
+}
+
+.solution::after{
+  content: "(解答終わり）"
+}
+
+
+
+
+
+
+
+.theorem::before{
+  content: "定理";
+  font-weight: bold;
+}
+
+
+
+.theorem>.title{
+  font-weight: bold; /*お好み装飾*/
+  display: inline;
+}
+  .theorem{
+  padding: 0.2em 0.5em;
+  margin: 0em 0;
+  color: #474747;
+  background: whitesmoke;/*背景色*/
+
+}
+
+
+.def::before{
+  content: "定義";
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+
+.def>.title{
+  font-weight: bold; /*お好み装飾*/
+  display: inline;
+}
+
+
+
+  .def{
+  padding: 0.2em 0.5em;
+  margin: 0em 0;
+  color: #474747;
+  background: whitesmoke;/*背景色*/
+
+}
+
+
+a{
+
+  color: royalblue;
+  text-decoration: none;
+}
+
+
+h2{
+  margin-left: 10px;
+}
+
+h3{
+  padding-left: 5px;
+  border-bottom: solid 3px gray;
+}
+
+p.long{
+
+  overflow-wrap: break-word;
+}
+
+.horizontal-scroll{
+overflow-x: auto;
+}
+
+.blank80{
+  margin: 80px 0px 80px 10px;
+}
+
+.blank60{
+  margin:60px 0px 60px 10px;
+}
+
+.blank40{
+  margin: 40px 0px 40px 0px;
+}
+
+.blank20{
+  margin:20px 0px 20px 0px;
+}
+
+.blank10{
+  margin:10px 0px 10px 10px;
+}
+
+.blank5{
+  margin:5px 0px 5px 0px;
+}
+
+.ublank80{
+  margin: 80px 0px 0px 0px;
+}
+
+.ublank60{
+  margin: 60px 0px 0px 0px;
+}
+
+.ublank40{
+  margin: 40px 0px 0px 0px;
+}
+.ublank30{
+  margin: 30px 0px 0px 0px;
+}
+
+.ublank20{
+  margin: 20px 0px 0px 0px;
+}
+
+
+.ublank10{
+  margin: 10px 0px 0px 0px;
+}
+
+.bblank80{
+  margin: 0px 0px 80px 0px;
+}
+
+.bblank60{
+  margin: 0px 0px 60px 0px;
+}
+
+.bblank40{
+  margin: 0px 0px 40px 0px;
+
+}
+.bblank20{
+  margin: 0px 0px 20px 0px;
+}
+
+.bblank10{
+  margin: 0px 0px 10px 0px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+
+.prop::before{
+  content: "命題";
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+
+.prop>.title{
+  font-weight: bold; /*お好み装飾*/
+  display: inline;
+}
+
+
+
+  .prop{
+  padding: 0.2em 0.5em;
+  margin: 0em 0;
+  color: #474747;
+  background: whitesmoke;/*背景色*/
+
+}
+
+.rdef::before{
+  content: "(ラフな)定義";
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+
+.rdef>.title{
+  font-weight: bold; /*お好み装飾*/
+  display: inline;
+}
+
+
+
+  .rdef{
+  padding: 0.2em 0.5em;
+  margin: 0em 0;
+  color: #474747;
+  background: whitesmoke;/*背景色*/
+
+}
+
+
+
+a{
+  margin-left: 10px
+}
+
+
+
+.accordion-container {
+  position: relative;
+  width: 100%;
+  border: 1px solid white;
+  border-top: none;
+  outline: 0;
+  cursor: pointer
+
+}
+
+.accordion-container .accordion-title {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0.625em 0.625em 0.625em 2em;
+  font-size: 1.25em;
+  font-weight: normal;
+  color: black;
+
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+
+.accordion-container .accordion-title:hover,
+.accordion-container .accordion-title:active,
+.accordion-container .content-entry.open .accordion-title {
+
+  color: black;
+
+}
+
+.accordion-container .accordion-title:hover i:before,
+.accordion-container .accordion-title:hover i:active,
+.accordion-container .content-entry.open i {
+  color: white;
+}
+
+.accordion-title{
+  position: relative;
+
+}
+
+.accordion-title:after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 38%;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: solid 2px black;
+  border-right: solid 2px ;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+
+}
+
+.accordion-title.open:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 45%;
+}
+
+.accordion-content {
+  position: relative;
+  display: none;
+  padding-left: 2.3125em;
+
+}
+
+/* CSS for CodePen */
+.accordion-container {
+  position: relative;
+  width: 90%;
+  margin: 1.875em auto;
+
+}
+
+a:hover{
+  color: royalblue;
+  text-decoration: underline;
+
+}
+
+@media screen and (min-width:480px) {
+  .accordion-container2 {
+    position: relative;
+    width: 20%;
+
+    border-top: none;
+    outline: 0;
+    cursor: pointer
+
+  }
+
+  .accordion-container2 .accordion-title2 {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0px 0 0px 0;
+
+    font-weight: normal;
+    color: gray;
+    background: white;
+    cursor: pointer;
+
+  }
+
+  .accordion-container2 .accordion-title2:hover,
+  .accordion-container2 .accordion-title2:active,
+  .accordion-container2 .content-entry.open .accordion-title2 {
+    background-color: white;
+    color: gray;
+
+  }
+
+  .accordion-container2 .accordion-title2:hover i:before,
+  .accordion-container2 .accordion-title2:hover i:active,
+  .accordion-container2 .content-entry.open i {
+    color: white;
+  }
+
+  .accordion-title2{
+    position: relative;
+    font-size: 12px;
+  }
+
+  .accordion-title2:after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 33%;
+    transition: all 0.2s ease-in-out;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-top: solid 1px gray;
+    border-right: solid 1px gray;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+
+  }
+
+  .accordion-title2.open:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 45%;
+  }
+
+  .accordion-content2 {
+    position: relative;
+    display: none;
+    padding: 4px;
+    color: gray;
+    font-size: 12px;
+    width: 500%;
+  }
+
+  /* CSS for CodePen */
+  .accordion-container2 {
+    position: relative;
+    width: 80px;
+    margin: 0;
+
+  }
+
+  .midasi{
+    margin: 30px 0px 2px 0px
+  }
+}
+
+ @media screen and (max-width:480px) {
+
+   .accordion-container2 {
+     position: relative;
+     width: 20%;
+
+     border-top: none;
+     outline: 0;
+     cursor: pointer
+
+   }
+
+   .accordion-container2 .accordion-title2 {
+     display: block;
+     position: relative;
+     margin: 0;
+     padding: 0px 0 0px 0;
+
+     font-weight: normal;
+     color: gray;
+     background: white;
+     cursor: pointer;
+
+   }
+
+   .accordion-container2 .accordion-title2:hover,
+   .accordion-container2 .accordion-title2:active,
+   .accordion-container2 .content-entry.open .accordion-title2 {
+     background-color: white;
+     color: gray;
+
+   }
+
+   .accordion-container2 .accordion-title2:hover i:before,
+   .accordion-container2 .accordion-title2:hover i:active,
+   .accordion-container2 .content-entry.open i {
+     color: white;
+   }
+
+   .accordion-title2{
+     position: relative;
+     font-size: 12px;
+   }
+
+   .accordion-title2:after {
+     content: "";
+     position: absolute;
+     right: 25px;
+     top: 33%;
+     transition: all 0.2s ease-in-out;
+     display: block;
+     width: 6px;
+     height: 6px;
+     border-top: solid 1px gray;
+     border-right: solid 1px gray;
+     -webkit-transform: rotate(135deg);
+     transform: rotate(135deg);
+
+   }
+
+   .accordion-title2.open:after {
+     -webkit-transform: rotate(-45deg);
+     transform: rotate(-45deg);
+     top: 45%;
+   }
+
+   .accordion-content2 {
+     position: relative;
+     display: none;
+     padding: 4px;
+     color: gray;
+     font-size: 12px;
+     width: 250%;
+   }
+
+   /* CSS for CodePen */
+   .accordion-container2 {
+     position: relative;
+     width: 40%;
+     margin: 0;
+
+   }
+
+   .midasi{
+     margin: 30px 0px 2px 0px
+   }
+
+ }
