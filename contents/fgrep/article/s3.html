@@ -4,7 +4,8 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="utf-8">
-  <link rel="stylesheet" href="../../../css/article.css">
+
+  <link rel="stylesheet" href="../../../css/article2.css">
   <link rel="stylesheet" href="../../../css/header.css">
   <title>S^3,A^4,S^4の既約(複素)表現　-数学処らぷらし庵-</title>
   <script type="text/x-mathjax-config">
@@ -32,30 +33,71 @@
 <div class="bblank40">$S_{3},A_{4},S_{4}$の既約(複素)表現を分類します。</div>
 
 <h3>用いる定理</h3>
-<p>有限群の表現論の基本的な定理のうち、以下を用います。</p>
+<p>有限群の表現論の基本的な定理のうち、以下の2つを用います。</p>
 
-まず、一次元表現にアーベル化の普遍性を適用した、以下を用います。
 <div class="theorem">
-  <p>$G$を群とし$\,\rho\,:\,G\rightarrow \mathbb{C}^{\times}\,$を一次元表現とすると、
-$\mathrm{Ker}\rho\supset [G,G]\,$がなりたつ。</p>
-<p>特に、<br>
-  {1次元表現}$= \mathrm{Hom}_{Grp}(G,\mathbb{C}^{\times})$
+
+<p>
+  {1次元表現}
   $\cong\mathrm{Hom}_{Ab}(G^{Ab},\mathbb{C}^{\times})$
   $(\cong G^{Ab})$　である。</p>
-<p>ここで$\,G^{Ab}\,$は$\,G\,$のアーベル化である。</p>
-  </div>
-<p>ここで定理内の、$\mathrm{Hom}_{Ab}(G^{Ab},\mathbb{C}^{\times})\cong G^{Ab}$
-  はあまり自然な同型とは言えませんが、便利なので書いておきました。</p>
 
-また、指標の理論から得られる系のうち以下を用います。
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../../../js/menu.js"></script>
+
+
+
+
+          <div id="accordion" class="accordion-container2">
+            <h4 class="accordion-title2 js-accordion-title">証明の概略</h4>
+            <div class="accordion-content2">
+              $\,\rho\,:\,G\rightarrow \mathbb{C}^{\times}\,$を一次元表現とすると、Abel化の普遍性から
+            $\mathrm{Ker}\rho\supset [G,G]\,$がなりたつ。
+
+            <p>特に、
+              {1次元表現全体}$= \mathrm{Hom}_{Grp}(G,\mathbb{C}^{\times})$
+              $\cong\mathrm{Hom}_{Ab}(G^{Ab},\mathbb{C}^{\times})$
+              である。</p>
+            <p>また一般に、有限可換群$G$に対して(自然とはいえないが、)
+              $\mathrm{Hom}_{Ab}(G,\mathbb{C}^{\times})\cong G$が成り立つので、
+              (これについては有限アーベル群の基本定理を用いたあと、巡回群と直積について考えれば証明できる。)<br>
+              {1次元表現全体}$\cong G^{Ab}$も言える。</p>
+            <p>(証明終わり)</p>
+              </div>
+      </div>
+
+
+
+<div class="ublank40">
+  </div>
 <div class="theorem">
   <p>$G$を有限群とし、$V_{1},\cdots,V_{k}$を既約表現の同型類とする。</p>
   <p>$k=$($G$の共役類の個数)<br>
-    $G=\sum_{i=1}^{k}(\mathrm{dim}_{\mathbb{C}}V_{i})^2$
+    $\displaystyle G=\sum_{i=1}^{k}(\mathrm{dim}_{\mathbb{C}}V_{i})^2$
   </p>
   <p>が成り立つ。</p>
 
 </div>
+
+<div id="accordion" class="accordion-container2">
+  <h4 class="accordion-title2 js-accordion-title">証明の概略</h4>
+  <div class="accordion-content2">
+    <p>(maschkeの定理と、指標の計算もしくはArtin-Wedderburnの定理から)
+      $\displaystyle\,\mathbb{C}[G]\cong \bigoplus_{i=1}^{k}\mathrm{End}_{\mathbb{C}}(V_{i})$であるから、
+    $\displaystyle G=\sum_{i=1}^{k}(\mathrm{dim}_{\mathbb{C}}V_{i})^2$がわかる。また中心の次元について、
+    $\mathrm{dim}_{\mathbb{C}}Z(\mathbb{C}[G])=k$</p>
+    <p>一方、<div class="horizontal-scroll">$『\displaystyle\sum_{\sigma \in G}a_{\sigma}\sigma \in Z(\mathbb{C[G]})』\Leftrightarrow
+      『a_{\sigma}=a_{\tau\sigma\tau^{-1}}　(\forall\tau \in G)』$</div>
+      から、$\mathrm{dim}_{\mathbb{C}}Z(\mathbb{C}[G])=$(共役類の個数)<br>
+      なので、$k=$(共役類の個数)となる。
+  <p>(証明の終わり)</p>
+    </div>
+</div>
+
+
+
 
 <p>ここで述べたことについては、
   桂[1]やFulton-Harris[2]などが、参考になると思います。
@@ -67,7 +109,7 @@ $\mathrm{Ker}\rho\supset [G,G]\,$がなりたつ。</p>
   $(S_{3})^{Ab}\cong \mathbb{Z}/2\mathbb{Z}\,$なので一次元表現は2個あり、
   自明表現$\,\mathbb{1}\,$と、符号表現$\mathrm{sgn}\,$に対応します。</p>
 <p>$S_{3}$の共役類は3つあるので、($\,\mathrm{id},(12),(123)$などが代表元)<br>
-  指標理論から、2次元既約表現があと一つあるはずです。
+  上で述べた2番目定理から、2次元既約表現があと一つあるはずです。
 </p>
 <p>平面内の正三角形$\,T\,$を考えてみましょう。<br>
 $\,T\,$を$\,T\,$に移すような線形変換は頂点の置換を引き起こすので、
@@ -88,7 +130,7 @@ $\displaystyle (132)V_{4}=\{(132),(234),(124),(143)\}\longmapsto \frac{{-1}\mp\s
 <p>なる表現が得られます。<br>
   私はこれらに明快な幾何学的解釈があるかどうかすぐにはわからないのですが、
   個人的には$A_{4}$の可解性が反映されているのだなという程度に理解しています。</p>
-<p>さて、$A_{4}$の共役類は4つ($\,\mathrm{id},(12)(34),(123),(132)$などが代表元)あるので上で述べた指標理論から、
+<p>さて、$A_{4}$の共役類は4つ($\,\mathrm{id},(12)(34),(123),(132)$などが代表元)あるので上で述べた2番目の定理から、
   3次元既約表現がもう一つあることになります。</p>
 <p>$\mathbb{R}^3$内の正四面体$\,T\,$を考えてみましょう。<br>
 $\,T\,$を$\,T\,$に移すようなを向きを保つ線型写像全体になす群は、
@@ -113,7 +155,7 @@ $\,V_{4}\subset A_{4}\subset S_{4}\,$、$\,S_{4}/V_{4}\cong S_{3}\,$などをみ
   $S_{3}$由来で1次元表現を2つ、2次元表現を2つ持ちます。</p>
 
 <p>$S_{4}$の共役類は5つ($\,\mathrm{id},(12),(123),(12)(34),(1234)\,$が代表元)なので、
-  指標理論から残りは3次元表現が3個ということになります。
+  上で述べた2番目の定理から残りは3次元表現が3個ということになります。
 
   <div class="ublank40">$\mathbb{R}^3$内の立方体$\,C\,$を考えてみましょう。<br>
   $\,C\,$を$\,C\,$に移すようなの向きを保つ線型写像全体になす群は、
