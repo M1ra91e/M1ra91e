@@ -181,3 +181,71 @@ a:hover{
   text-decoration: underline;
 
 }
+
+.blank80{
+  margin: 80px 0px 80px 10px;
+}
+
+.blank60{
+  margin:60px 0px 60px 10px;
+}
+
+.blank40{
+  margin: 40px 0px 40px 0px;
+}
+
+.blank20{
+  margin:20px 0px 20px 0px;
+}
+
+.blank10{
+  margin:10px 0px 10px 10px;
+}
+
+.blank5{
+  margin:5px 0px 5px 0px;
+}
+
+.ublank80{
+  margin: 80px 0px 0px 0px;
+}
+
+.ublank60{
+  margin: 60px 0px 0px 0px;
+}
+
+.ublank40{
+  margin: 40px 0px 0px 0px;
+}
+.ublank30{
+  margin: 30px 0px 0px 0px;
+}
+
+.ublank20{
+  margin: 20px 0px 0px 0px;
+}
+
+
+.ublank10{
+  margin: 10px 0px 0px 0px;
+}
+
+.bblank80{
+  margin: 0px 0px 80px 0px;
+}
+
+.bblank60{
+  margin: 0px 0px 60px 0px;
+}
+
+.bblank40{
+  margin: 0px 0px 40px 0px;
+
+}
+.bblank20{
+  margin: 0px 0px 20px 0px;
+}
+
+.bblank10{
+  margin: 0px 0px 10px 0px;
+}
