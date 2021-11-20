@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../../css/header.css">
+  <link rel="stylesheet" href="../../../css/article.css">
+  <title>二面体群の自己同型群</title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
+  </script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+</head>
+<header>
+<h1>数学処 らぷらし庵</h1>
+<nav class="pc-nav">
+  <ul>
+    <li><a href="../../../index.html">トップページ</a>
+    <li><a href="../../../article.html">記事</a>
+    <li><a href="../../../ex.html">演習問題</a>
+    <li><a href="../../../link.html">リンク</a>
+  </ul>
+</nav>
+</header>
+<body>
+
+<h2>$D_{2n}$の自己同型群</h2>
+<div class="bblank40">2面体群の自己同型が気になったので計算してみました。この結果と、
+  $D_{2n}$の既約表現を比較してみると面白いです。</div>
+
+<div class="question">
+  <p>
+  2面体群$\,D_{2n}\,(n\geqq 3)$の自己同型群$\,\mathrm{Aut}(D_{2n})\,$の構造を調べよ。
+  (例えば、より構造のよくわかっている群と同型になるといった事柄を調べよ。)
+  </p>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../../../js/menu.js"></script>
+
+<div id="accordion" class="accordion-container">
+  <h4 class="accordion-title js-accordion-title">解答例</h4>
+  <div class="accordion-content">
+    <p>$D_{2n}=\langle\,\sigma,\tau\,|\,\sigma^{n}=\tau^{2}=(\sigma\tau)^{2}\,\rangle$
+      と記述することにする。
+      </p>
+      <p>$\varphi \in \mathrm{Aut}(D_{2n})\,$とする。$\varphi$は、$\varphi(\sigma),\varphi(\tau)$から決まるので、
+        これらの値を調べることにする。</p>
+      <p>自己同型は位数を保つので、$k\in (\mathbb{Z}/n\mathbb{Z})^{\times}$が存在して
+        $\varphi(\sigma)=\sigma^{k}$となるはずである。<br>
+        ($\,\sigma^{k}\,$の位数は$\displaystyle\,\frac{n}{\mathrm{gcd}(n,k)}\,$、$\tau\sigma^{k}\,$の位数は$\,2\,$だった。)
+        </p>
+
+      <p>このとき、$l\in \mathbb{Z}/n\mathbb{Z}\,$が存在して、$\varphi(\tau)=\sigma^{l}\,$とすると$\,\varphi\,$
+        が全射にならないので、ある$\,l\in\mathbb{Z}/n\mathbb{Z}\,$が存在して
+        $\varphi(\tau)=\tau\sigma^{l}\,$となるはずである。</p>
+
+      <p>このように定めると、$\varphi(\sigma)^{n}=\sigma^{kn}$、$\varphi(\tau)^{2}=\tau\sigma^{k}\tau\sigma^{k}=1$、
+        $(\varphi(\sigma)\varphi(\tau))^{2}=\sigma^{k}\tau\sigma^{l}\sigma^{k}\tau\sigma^{l}=1$から、(自由群と商の普遍性を用いて)
+        $\varphi$がwell-definedな準同型であることがわかる。全単射になることも簡単にわかる($\sigma,\tau \in \mathrm{Im}\varphi$
+        がすぐに確認できる。)ので、$\varphi$は確かに自己同型である。これを$\,\varphi_{k,l}\,(\in \mathrm{Aut}(D_{2n}))$と書く。
+      </p>
+      $\varphi_{k_{1},l_{1}}\circ\varphi_{k_{2},l_{2}}(\sigma)=\sigma^{k_{1}k_{2}}$、
+        <div class="horizontal-scroll">
+        $\varphi_{k_{1},l_{1}}\circ\varphi_{k_{2},l_{2}}(\tau)=\varphi_{k_{1},l_{1}}(\tau\sigma^{l_{2}})=\tau\sigma^{l_{1}+k_{1}l_{2}}$
+      </div>
+      であるから、$\varphi_{k_{1},l_{1}}\circ\varphi_{k_{2},l_{2}}=\varphi_{k_{1}k_{2}\,,l_{1}+k_{1}l_{2}}$となる。
+      <p>従って、$\mathrm{Aut}(D_{2n})\cong(\mathbb{Z}/n\mathbb{Z})^{\times}\ltimes_{\alpha}\mathbb{Z}/n\mathbb{Z}$と言える。<br>
+        ここで、$\alpha : \,(\mathbb{Z}/n\mathbb{Z})^{\times} \rightarrow \mathrm{Aut}_{\mathbb{Z}}(\mathbb{Z}/n\mathbb{Z})$は、
+        $\alpha(k)=(l\mapsto kl)$で定まっている。</p>
+
+      <p>(解答例終わり)</p>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="ublank80">
+<a href="../../../index.html">トップページへ</a><br>
+<a href="../list.html">群論(演習)へ</a>
+</div>
+
+
+</body>
+</html>
