@@ -577,3 +577,15 @@ a:hover{
    }
 
  }
+ 
+.kyoutyou {
+    padding: 0.5em 1em;
+    margin: 1.2em 0em 2em 0em;    
+    background: #FFF;
+    border: solid 1px #00CC00;/*線*/
+    
+}
+.kyoutyou p {
+    margin: 1em; 
+    padding: 1em;
+}     
