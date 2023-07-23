@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../../css/article.css">
+  <link rel="stylesheet" href="../../../css/header.css">
+  <title>テンソル空間、外積代数、対称代数の内積　-数学処らぷらし庵-</title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
+  </script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+</head>
+
+<header>
+<h1>数学処 らぷらし庵</h1>
+<nav class="pc-nav">
+  <ul>
+    <li><a href="../../../index.html">トップページ</a>
+    <li><a href="../../../article.html">記事</a>
+    <li><a href="../../../ex.html">演習問題</a>
+    <li><a href="../../../link.html">リンク</a>
+  </ul>
+</nav>
+</header>
+
+<body>
+
+<h2>テンソル空間、外積代数、対称代数の内積</h2>
+<div class="bblank40">内積空間のテンソル積や外積代数、対称代数に内積をどう定めるべきかということについてまとめます。</div>
+
+
+<h3>テンソル空間の内積</h3>
+<p>まずはテンソル積から考えてみましょう。</p>
+<div class="theorem">
+<p>
+  $\,(V,\mathrm{g})\,$と$\,(W,\mathrm{h})\,$を実内積空間とする。<br>
+  このとき、$V\otimes W$上の計量$\,\mathrm{g}\otimes\mathrm{h}\,$であって、</p>
+<div class="horizontal-scroll">
+  $(\mathrm{g}\otimes\mathrm{h})(v_{1}\otimes w_{1}, v_{2}\otimes w_{2})=\mathrm{g}(v_{1},v_{2})\mathrm{h}(w_{1},w_{2})　-(☆)$
+  </div>
+  <p>
+  を満たすものが一意的に存在する。</p>
+
+</div>
+<div class="proof">
+<p>
+  条件$(☆)$から、</p>
+  <div class="horizontal-scroll">
+  $\displaystyle (\mathrm{g}\otimes\mathrm{h})(\sum_{i} v_{1}^{(i)}\otimes w_{1}^{(i)}, \sum_{j} v_{2}^{(j)}\otimes w_{2}^{(j)})
+  =\sum_{i,j}\mathrm{g}(v_{1}^{(i)},v_{2}^{(j)})\mathrm{h}(w_{1}^{(i)},w_{2}^{(j)})$　</div>
+となるべきある。(したがって、高々一意。)<br>
+  あとは存在を証明すればよい。
+
+<div class="ublank40">存在の証明のためには、上の表示のwell-defined性、対称性、正値性を示せば十分である。</div>
+wellーdefined性については、
+<div class="horizontal-scroll">
+  $(\mathrm{g}\otimes\mathrm{h})((au_{1}+bv_{1})\otimes w_{1},v_{2}\otimes w_{2})
+  =a(\mathrm{g}\otimes\mathrm{h})(u_{1}\otimes w_{1},v_{2}\otimes w_{2})
+  +b(\mathrm{g}\otimes\mathrm{h})(v_{1}\otimes w_{1},v_{2}\otimes w_{2})$
+</div>
+等々を確認すればよいが、これは簡単に確認できる。
+<div class="ublank20">
+  対称性は$\,\mathrm{g}\,$と$\,\mathrm{h}\,$の対称性から直ちに従う。
+</div>
+<div class="ublank20">
+  最後に、正値性を示す。</div>
+  <div class="horizontal-scroll">
+  $\displaystyle (\mathrm{g}\otimes\mathrm{h})(\sum_{i} v^{(i)}\otimes w^{(i)}, \sum_{i} v^{(i)}\otimes w^{(i)}) > 0$<br>
+  </div>
+  を示せばよい。<br>
+  $\{v^{(i)}\}$の生成する部分空間$\,V'\,$と<br>
+  $\{w^{(i)}\}$の生成する部分空間$\,W'\,$の<br>
+  テンソル積、$V'\otimes W'$に制限して考えても同じことなので、<br>
+  $\,V\,$と$\,W\,$は有限次元だとして正値性を示せば十分。
+
+  <p>有限次元ベクトル空間には正規直交基底が存在するので、<br>
+    $\,V\,$の正規直交基底を、$e_{1},\cdots,e_{m}$<br>
+    $\,W\,$の正規直交基底を、$f_{1},\cdots,f_{n}$<br>
+    とすると、<br>
+    $(\mathrm{g}\otimes\mathrm{h})(e_{i}\otimes f_{j},e_{k}\otimes f_{l})=\delta_{ik}\delta_{jl}$<br>
+    であることから、正値性がわかる。</p>
+</div>
+
+<h3>外積代数の内積</h3>
+<p>次に外積代数の内積について考えてみます。外積代数の定義は複数ありますが、ここでは以下を採用します。</p>
+<div class="def">
+<p>$\,V\,$を$\,k\,$線形空間とする。<span class="bold">ウェッジ積</span>$\,\wedge\,$を、</p>
+<div class="horizontal-scroll">$\displaystyle v_{1}\wedge \cdots \wedge v_{k} = \sum_{\sigma\in\mathfrak{S}_{k}}
+  \mathrm{sn}(\sigma)v_{\sigma(1)}\otimes \cdots \otimes v_{\sigma(k)} \in  V^{\otimes k}$
+  </div>
+により定め、
+<p>$\,\bigwedge^{k} V\,$を、$\,\displaystyle v_{1}\wedge \cdots \wedge v_{k}\,$という形の元が生成する
+  $V^{\otimes k}\,$の部分空間として定義する。
+  </p>
+</div>
+<p>上の定義を採用すると、テンソル代数の内積を制限することにより、外積代数の内積が定まります。</p>
+<p>つまり、$(V,\mathrm{g})$を内積空間としたとき、</p>
+<div class="horizontal-scroll">
+  $(\wedge^{k}\mathrm{g})(\, v_{1}\wedge \cdots \wedge v_{k}\,,\, w_{1}\wedge \cdots \wedge w_{k})$<br>
+<div class="ublank10">
+  $=\displaystyle\sum_{\sigma, \tau \in \mathfrak{S}_{k}}\mathrm{sn}(\sigma\tau)
+  \mathrm{g}(v_{\sigma(1)},w_{\tau(1)})\cdots\mathrm{g}(v_{\sigma(k)},w_{\tau(k)})$</div>
+<div class="ublank10">
+  $=\displaystyle k!\sum_{\sigma\in \mathfrak{S}_{k}}\mathrm{sn}(\sigma)
+  \mathrm{g}(v_{1},w_{\sigma(1)})\cdots\mathrm{g}(v_{k},w_{\sigma(k)})$
+</div>
+<div class="ublank10">
+  $=\displaystyle k!\begin{vmatrix}
+  g(v_{1},w_{1}) & \cdots & g(v_{1},w_{k}) \\
+  \vdots & \ddots & \vdots \\
+  g(v_{k}, w_{1}) & \cdots & g(v_{k}, w_{k})\\
+  \end{vmatrix}$
+  </div>
+</div>
+<p>と定めることができます。</p>
+<p>
+お好みで、定数倍して$\,k!\,$をキャンセルするのもアリだとと思います。</p>
+
+<h3>対称代数の内積</h3>
+<p>最後に対称代数についてですが、外積代数の場合とほぼ同じです。
+つまり、テンソル代数の部分代数として対称代数を実現して、
+テンソル代数の内積を制限すれば対称代数に内積が定まります。</p>
+<div class="ublank30">
+  明示的には、例えば
+<div class="horizontal-scroll">
+$(S^{k}\mathrm{g})(\,v_{1}\cdots v_{k}\,,\,w_{1}\cdots w_{k}\,)$<br>
+$=k!\displaystyle\left. \partial_{x^{1}}\cdots\partial_{x^{k}}\right|_{x=0}\prod_{i=1}^{k}
+\sum_{j=1}^{k} g(v_{i},w_{j})x^{j}$
+</div>
+などと書けると思います。
+<p>
+<a href="../../../index.html">トップページへ</a><br>
+<a href="../list.html">線形代数学へ</a>
+
+</p>
+</body>
+</html>
