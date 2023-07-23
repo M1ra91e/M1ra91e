@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../../css/article.css">
+  <link rel="stylesheet" href="../../../css/header.css">
+  <title>C[t]の表現論　-数学処らぷらし庵-</title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
+  </script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+</head>
+
+<header>
+<h1>数学処 らぷらし庵</h1>
+<nav class="pc-nav">
+  <ul>
+    <li><a href="../../../index.html">トップページ</a>
+    <li><a href="../../../article.html">記事</a>
+    <li><a href="../../../ex.html">演習問題</a>
+    <li><a href="../../../link.html">リンク</a>
+  </ul>
+</nav>
+</header>
+
+<body>
+<h2>$\,\mathbb{C}[t]\,$の表現</h2>
+
+<div class="bblank40">
+
+
+    $\mathbb{C}[t]$の表現の分類は、Jordan標準形の一つの解釈といえそうです。
+
+  </div>
+
+
+<div class="question">
+<p>
+一変数複素多項式環$\mathbb{C}[t]$の有限次元複素線形表現の同型類と直既約表現、既約表現を分類せよ。
+(Jordan標準形の理論を既知としてよい。)
+</p>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../../../js/menu.js"></script>
+
+<div id="accordion" class="accordion-container">
+  <h4 class="accordion-title js-accordion-title">解答例</h4>
+  <div class="accordion-content">
+<p>
+(多項式の普遍性から)$t$の行き先で表現が決まる。<br>
+$t$の行き先が$\,A\in M(n,\mathbb{C})$であるような表現を$\rho_{A}$とすると、<br>
+  『$\rho_{A}$と$\rho_{B}$が同型』<br>
+  $\Leftrightarrow$『ある$P\in GL(n,\mathbb{C})$
+  が存在して、$P\circ \rho_{A}=\rho_{B}\circ P$が成り立つ。』<br>
+  $\Leftrightarrow$『ある$P\in GL(n,\mathbb{C})$
+  が存在して、$PA=BP$が成り立つ。』<br>
+  $\Leftrightarrow$『$A$と$B$のJordan標準形は等しい。』<br>
+  したがって、表現の同型類はJordan標準形と一対一対応する。</p>
+  <p>
+    次に、直既約表現を分類する。<br>
+    $J(n,\lambda)=\begin{pmatrix}
+    \lambda & 1 & 0 & \cdots & 0 & 0\\
+    0 & \lambda & 1 & \cdots & 0 & 0\\
+    0 & 0 & \lambda & \cdots & 0 & 0\\
+    \vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+    0 & 0 & 0 & \cdots & \lambda & 1\\
+    0 & 0 & 0 & \cdots & 0 & \lambda\\
+    \end{pmatrix}$<br>
+    とする。</p>
+    <p>
+    $\,A = \,\displaystyle\oplus_{i=1}^{m} J(n_{i},\lambda_{i})
+    　(m \geqq 2)$のとき、<br>
+    表現空間$\,\mathbb{C}^{n_{1}+\cdots+n_{m}}\,$は$\,\bigoplus_{i=1}^{m} \mathbb{C} ^{n_{i}}$
+    と分解するので、直既約ではない。</p>
+
+    <p>
+      $A=J(n,\lambda)\,$のとき、表現は直既約であることを示す。<br>
+      $V\subset \mathbb{C}^n$を部分表現とする。
+      $\,e_{i}\,$を第$\,i\,$成分が$\,1\,$、その他の成分が$\,0\,$の(縦)ベクトルとし、
+      $v = a_{1}e_{1}+\dots a_{k}e_{k} \in V　(a_{k}≠0)$とする。</p>
+      このとき<br>
+      $\,(A-\lambda)^{k-1}v=a_{k}e_{1}\in V$　より、$e_{1}\in V$<br>
+      $\,(A-\lambda)^{k-2}v=a_{k-1}e_{1}+a_{k}e_{2}\in V$　より、$e_{2}\in V$<br>
+      　　　$\vdots$<br>
+     $\,(A-\lambda)^{0}v=a_{1}e_{1}+\dots a_{k}e_{k} \in V $より、$e_{k}\in V$<br>
+したがって、$\mathbb{C}^k\oplus 0^{n-k}\subset V$となる。</p>
+  これより、ある$\,r\,$が存在して、$V = \mathbb{C}^{r}\oplus 0^{n-r}$となる。<br>
+  特に、部分表現は$\mathbb{C}^{r}\oplus 0^{n-r}$という形ものに限る。
+  </p>
+  <p>ここから直ちに、$A=J(n,\lambda)\,$のとき、表現は直既約になることがわかる。
+  また、表現が既約になるのは、$n=1$のときに限ることもわかる。</p>
+  <p>以上から直既約表現はJordanブロックと一対一対応していて、
+    そのうちで既約表現は1次のJordanブロックと一対一対応していることがわかった。</p>
+  <p>(解答終わり)</p>
+  </div><!--/.accordion-content-->
+
+
+
+
+</div>
+
+<div class="ublank80">
+  (コメント)<br>
+  Jordan標準形の理論を既知としない解答もいつか書きます。
+</div>
+<p>
+<a href="../../../index.html">トップページへ</a><br>
+<a href="../../../article.html">記事一覧へ</a><br>
+<a href="../list.html">表現論(演習)の記事一覧へ</a>
+</p>
+
+</body>
+</html>
