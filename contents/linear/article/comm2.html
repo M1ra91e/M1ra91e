@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../../css/article.css">
+  <link rel="stylesheet" href="../../../css/header.css">
+  <title>２つの行列が可換になる条件(初等的視点から)　-数学処らぷらし庵-</title>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } });
+  </script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+  </script>
+</head>
+
+<header>
+<h1>数学処 らぷらし庵</h1>
+<nav class="pc-nav">
+  <ul>
+    <li><a href="../../../index.html">トップページ</a>
+    <li><a href="../../../article.html">記事</a>
+    <li><a href="../../../ex.html">演習問題</a>
+    <li><a href="../../../link.html">リンク</a>
+  </ul>
+</nav>
+</header>
+
+<body>
+  <h2>2つの複素行列が可換になる条件(初等的視点から)</h2>
+  <p>2つの複素行列が可換になるための条件を線形代数のみを用いて考えます。</p>
+
+    <div class="bblank40">表現論的視点から述べた記事もあります。良ければそちらも是非。<br>
+    <a href="comm.html">→　2つの複素行列が可換になる条件(表現論的視点から)　-数学処らぷらし庵-</a><br>
+  </div>
+
+<h3>Jordan標準形への帰着</h3>
+<p>この記事においてJordan標準形の理論は既知とし、<br>
+ジョルダン行列$\,J(n,\lambda)\,$を、</p>
+  <div class="horizontal-scroll">
+    $J(n,\lambda)=\begin{pmatrix}
+    \lambda & 1 & 0 & \cdots & 0 & 0\\
+    0 & \lambda & 1 & \cdots & 0 & 0\\
+    0 & 0 & \lambda & \cdots & 0 & 0\\
+    \vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+    0 & 0 & 0 & \cdots & \lambda & 1\\
+    0 & 0 & 0 & \cdots & 0 & \lambda\\
+    \end{pmatrix}
+  \in M(n,\mathbb{C})$
+  </div>
+  <p>とします。</p>
+
+
+まず、以下の事実に注目します。
+<div class="prop">
+  <p>$\,P\,$を正則行列とする。</p>
+  <p>『$\,A\,$と$\,B\,$は可換』$\Leftrightarrow$『$\,PAP^{-1}\,$と$\,PBP^{-1}\,$』は可換である。</p>
+
+</div>
+<p>これから、$\,A\,$がJordan標準形を$\,J=J(n_{1},\lambda_{1})\oplus \cdots \oplus J(n_{k},\lambda_{k})$とし、<br>
+  $\,A=PJP^{-1}\,$とすると、</p>
+<p>
+  $\,\{B\in M(n,\mathbb{R})\,;\,AB=BA\}$
+  $=\,P\{X\in M(n,\mathbb{R})\,;\,JX=XJ\}P^{-1}$</p>
+<p>となるので、$A$がJordan標準形のときにどうなるかわかれば、本質的に問題が解けたと言ってよいだろうということがわかります。</p>
+
+<h3>ブロックに分割する</h3>
+<p>
+  $A=J(n_{1},\lambda_{1})\oplus \cdots \oplus J(n_{k},\lambda_{k})$とし、これに沿って$\,B\,$を、</p>
+<p>
+  $B= \begin{pmatrix}
+  B_{11} & \cdots & B_{1k} \\
+  \vdots & \ddots & \vdots \\
+  B_{k1} & \cdots & B_{kk} \\
+  \end{pmatrix}
+  　$
+  </p>
+  <p>とブロック分割する。<br>
+    ここで、$\,B_{ij}\in M(n_{i},n_{j},\mathbb{C})\,$である。</p>
+
+  <p>このブロック分割において、
+    $A= \begin{pmatrix}
+    J(n_{1},\lambda_{1}) & 0 & \cdots  & 0 \\
+    0 & J(n_{2},\lambda_{2}) & \cdots  & 0 \\
+    \vdots & \vdots & \ddots &  \vdots\\
+
+    0 & 0 & \cdots  & J(n_{k},\lambda_{k})\\
+    \end{pmatrix}
+    　$だから、</p>
+    <p>$『AB=BA』\Leftrightarrow$ <br>
+      『全てのi,jに対して、$J(n_{i},\lambda_{i})B_{ij} = B_{ij}J(n_{j},\lambda_{j})』$
+      となる。</p>
+
+    <div class="bblank40">したがって問題は、<br>
+      $\{X\in M(m,n,\mathbb{C})\,;\,J(m,\lambda)X=XJ(n,\mu)\}$<br>
+      を求めることに帰着する。</div>
+
+<h3>計算</h3>
+<p>
+  $\{X\in M(m,n,\mathbb{C})\,;\,J(m,\lambda)X=XJ(n,\mu)\}\,$を計算する。
+</p>
+<p>
+  $X=\begin{pmatrix}
+  x_{11} & \cdots & x_{1n}\\
+  \vdots & \ddots & \vdots\\
+  x_{m1} & \cdots & x_{mn}\\
+  \end{pmatrix}$
+  とする。
+  </p>
+<p>
+  $『\,J(m,\lambda)X=XJ(n,\mu)\,』$
+  $\Leftrightarrow$ <br>
+  『$1 \leqq i,j\leqq n$に対し、$\lambda x_{i,j}+x_{i+1,j}=\mu x_{i,j}+x_{i,j-1}　-(☆)_{ij}\,$』</p>
+<p>
+  (ここで、$ i < 1 ,n < i$または、$i < 0,n < i$のとき、
+  $x_{ij}=0$とする。)</p>
+
+  まずは、$\lambda ≠ \mu$のときを考える。<br>
+  以下が成り立つ。
+<div class="theorem">
+  <p>
+    $\lambda ≠ \mu$のとき、</p>
+    <p>
+    $\{X\in M(m,n,\mathbb{C})\,;\,J(m,\lambda)X=XJ(n,\mu)\}\,=0$
+  </p>
+  <p>が成り立つ。</p>
+  </div>
+  <div class="proof">
+    <p>$x_{ij}=0$を示せばよい。</p>
+    <p>$j-i$に関する帰納法を行う。(行列の左下から順に示していくイメージ)</p>
+    <p>まず$j-i=1-m$のとき、(つまり$i=m,\,j=1$のとき)<br>
+    $\,(☆)_{m1}\,$から、$\,x_{m1}=0\,$である。</p>
+<p>これに加えて、$(☆)_{ij}$から、$\displaystyle x_{ij}=\frac{1}{\lambda - \mu}(x_{i,j-1}-x_{i+1,j})$から、
+  帰納法の議論ができる。
+      </p>
+  </div>
+
+<div class="ublank40">
+  <p>次に$\lambda =\mu$とする。<br>
+    このとき、$x_{i+1,j}=x_{i,j-1}　(i,j=1,2,\cdots,n)$が成り立つ。</p>
+  <p>$x_{m+1,j}=0　(j=1,\cdots n),\,x_{i,0}=0　(i=1,\cdots m)$だから、<br>
+    少し考えると、<br>
+    $-m \leqq j-i\leqq \mathrm{max}\,\{\,0\,, n-m-1\,\} $のとき、<br>
+    $x_{ij}=0$となることがわかる。</p>
+  <p>$\mathrm{max}\,\{\,0\,,, n-m-1\,\}\leqq j-i\leqq n$のときは、<br>
+    $x_{1, 1+j-i}=x_{2,2+i-j}=\cdots =x_{i,j}=\cdots=x_{n+i-j,n}$<br>
+    であり、これは$0$とは限らない。</p>
+  <p>(煩雑ですが、紙に書いて手を動かしてみると、実は簡単であることがわかります。)</p>
+
+以上で述べたことをまとめると、
+  <div class="theorem">
+<p>$J(m,\lambda)X=XJ(n,\mu)$を満たす行列は、</p>
+  $m \geqq n$のとき、
+  <div class="horizontal-scroll">
+
+    $
+    \begin{pmatrix}
+    0 & \cdots & 0 & a_{n} & a_{n-1} & a_{n-2} & \cdots & a_{3} & a_{2} & a_{1}\\
+    0 & \cdots & 0 & 0 & a_{n} & a_{n-1} & \cdots & a_{4} & a_{3} & a_{2}\\
+    0 & \cdots & 0 & 0 & 0 & a_{n} & \cdots & a_{5} & a_{4} & a_{3}\\
+    \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+    0 & \cdots & 0 & 0 & 0 & 0 & \cdots & a_{n} & a_{n-1} & a_{n-2}\\
+    0 & \cdots & 0 & 0 & 0 & 0 & \cdots & 0 & a_{n} & a_{n-1}\\
+    0 & \cdots & 0 & 0 & 0 & 0 & \cdots & 0 & 0 & a_{n}\\
+    \end{pmatrix}
+    $
+  </div>
+  <div class="ublank40">
+  $m \leqq n$のとき、</div>
+  <div class="horizontal-scroll">
+
+    $\begin{pmatrix}
+     a_{m} & a_{m-1} & a_{m-2} & \cdots & a_{3} & a_{2} & a_{1}\\
+     0 & a_{m} & a_{m-1} & \cdots & a_{4} & a_{3} & a_{2}\\
+     0 & 0 & a_{m} & \cdots & a_{5} & a_{4} & a_{3}\\
+     \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+     0 & 0 & 0 & \cdots & a_{m} & a_{m-1} & a_{m-2}\\
+     0 & 0 & 0 & \cdots & 0 & a_{m} & a_{m-1}\\
+     0 & 0 & 0 & \cdots & 0 & 0 & a_{m}\\
+     0 & 0 & 0 & \cdots & 0 & 0 & 0\\
+     \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+     0 & 0 & 0 & \cdots & 0 & 0 & 0\\
+
+    \end{pmatrix}
+    $
+
+  </div>
+  <p>という形をしている。</p>
+  </div>
+  </div>
+
+<h3>まとめ</h3>
+<p>以上の操作を逆に辿れば、ある行列と可換な行列を求めることができる。
+  </p>
+  一つの定理としてまとめておくと、
+<div class="theorem">
+  <p>
+    <div class="horizontal-scroll">
+    $A\in M(n,\mathbb{C})$が正則行列$\,P\,$により、$\displaystyle PAP^{-1}=\bigoplus_{l=1}^{b}\left(\bigoplus_{k=1}^{a_{l}}J(n_{k}^{(l)},\lambda_{l})\right)　
+    (n_{1}^{(l)}\leqq n_{2}^{(l)}\leqq \cdots \leqq n_{k}^{(l)})$</div>
+    とJordan標準化されるとき、<br>
+    $\,A\,$と可換な行列$\,B\,$は以下のように書けるもの全体である。
+    <div class="blank5">$B=P^{-1}(F_{\lambda_{1}}\oplus \cdots \oplus F_{\lambda_{b}})P$</div>
+    <div class="blank5">ここで、$F_{\lambda_{l}}=(G_{pq})_{p,q=1}^{a_{l}}$</div>
+    $p \geqq q$のとき、
+    <div class="horizontal-scroll">
+
+      $G_{pq}=
+      \begin{pmatrix}
+      0 & \cdots & 0 & a_{n_{q}^{(l)}} & a_{n_{q}^{(l)}-1} & a_{n_{q}^{(l)}-2} & \cdots & a_{3} & a_{2} & a_{1}\\
+      0 & \cdots & 0 & 0 & a_{n_{q}^{(l)}} & a_{n_{q}^{(l)}-1} & \cdots & a_{4} & a_{3} & a_{2}\\
+      0 & \cdots & 0 & 0 & 0 & a_{n_{q}^{(l)}} & \cdots & a_{5} & a_{4} & a_{3}\\
+      \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+      0 & \cdots & 0 & 0 & 0 & 0 & \cdots & a_{n_{q}^{(l)}} & a_{n_{q}^{(l)}-1} & a_{n_{q}^{(l)}-2}\\
+      0 & \cdots & 0 & 0 & 0 & 0 & \cdots & 0 & a_{n_{q}^{(l)}} & a_{n_{q}^{(l)}-1}\\
+      0 & \cdots & 0 & 0 & 0 & 0 & \cdots & 0 & 0 & a_{n_{q}^{(l)}}\\
+      \end{pmatrix}
+      $
+    </div>
+    <div class="ublank40">
+      $p \leqq q$のとき、
+      <div class="horizontal-scroll">
+
+        $G_{pq}=\begin{pmatrix}
+         a_{n_{p}^{(l)}} & a_{n_{p}^{(l)}-1} & a_{n_{p}^{(l)}-2} & \cdots & a_{3} & a_{2} & a_{1}\\
+         0 & a_{n_{p}^{(l)}} & a_{n_{p}^{(l)}-1} & \cdots & a_{4} & a_{3} & a_{2}\\
+         0 & 0 & a_{n_{p}^{(l)}} & \cdots & a_{5} & a_{4} & a_{3}\\
+         \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+         0 & 0 & 0 & \cdots & a_{n_{p}^{(l)}} & a_{n_{p}^{(l)}-1} & a_{n_{p}^{(l)}-2}\\
+         0 & 0 & 0 & \cdots & 0 & a_{n_{p}^{(l)}} & a_{n_{p}^{l}-1}\\
+         0 & 0 & 0 & \cdots & 0 & 0 & a_{n_{p}^{l}}\\
+         0 & 0 & 0 & \cdots & 0 & 0 & 0\\
+         \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+         0 & 0 & 0 & \cdots & 0 & 0 & 0\\
+
+        \end{pmatrix}
+        $
+  </p>
+  <p>となっている。</p>
+</div>
+</div>
+</div>
+
+
+
+
+<h3>コメント</h3>
+<p>ずっと疑問に思っていたことだったので解決できて嬉しかったです。</p>
+
+<p>
+<a href="../../../index.html">トップページへ</a><br>
+<a href="../list.html">線形代数学へ</a>
+</p>
+</body>
+</html>
